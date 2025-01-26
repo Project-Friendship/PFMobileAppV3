@@ -1,0 +1,41 @@
+{
+  "name": "my_amplify_app",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@aws-amplify/auth": "^6.10.1",
+    "@aws-amplify/core": "^6.9.2",
+    "@aws-amplify/react-native": "^1.1.6",
+    "@aws-amplify/ui-react-native": "^2.4.1",
+    "@react-native-async-storage/async-storage": "^2.1.0",
+    "@react-native-community/netinfo": "^11.4.1",
+    "aws-amplify": "^6.12.2",
+    "expo": "~52.0.25",
+    "expo-status-bar": "~2.0.1",
+    "react": "18.3.1",
+    "react-native": "0.76.6",
+    "react-native-get-random-values": "^1.11.0",
+    "react-native-safe-area-context": "^4.14.1",
+    "react-native-url-polyfill": "^2.0.0"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.13.0",
+    "@aws-amplify/backend-cli": "^1.4.6",
+    "@babel/core": "^7.25.2",
+    "@types/react": "~18.3.12",
+    "@types/react-native": "^0.73.0",
+    "aws-cdk": "^2.175.1",
+    "aws-cdk-lib": "^2.175.1",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.24.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "private": true
+}
