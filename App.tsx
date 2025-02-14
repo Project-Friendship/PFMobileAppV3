@@ -19,7 +19,11 @@ const customTheme = {
       neutral: {
             10: 'red' ,
             20: 'blue' ,
+            30: 'brown',
             40: 'orange',
+            50: 'violet',
+            60: 'pink',
+            70: 'green',
             80: 'gray',
             90: 'purple',
             100: 'black',
@@ -91,7 +95,7 @@ function App() {
         // custom form style
         components={{
           SignIn: (props) => (
-            <Authenticator.SignIn {...props} style={{ backgroundColor: 'orange', borderRadius: 10, padding: 10 }} />
+            <Authenticator.SignIn {...props} style={{ backgroundColor: 'orange', borderRadius: 10, padding: 10 }} /> // this style is not working
           ),
         }}
       >
