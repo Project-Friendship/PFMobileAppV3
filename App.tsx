@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, Image } from 'react-native';
 
 import { Amplify } from 'aws-amplify';
 import {
@@ -22,11 +22,11 @@ const customTheme = {
             30: 'brown',
             40: 'orange',
             50: 'violet',
-            60: 'pink',
+            60: '#7030a0', // PF purple
             70: 'green',
             80: 'gray',
-            90: 'purple',
-            100: 'black',
+            90: '#bc1d29', // PF red
+            100: '#bc1d29',
           },
           black: { value: '#fff' },
           white: { value: '#000' },
@@ -39,8 +39,8 @@ const customTheme = {
     },
     fonts: {
       default: {
-        variable: { value: 'Raleway, sans-serif' },
-        static: { value: 'Raleway, sans-serif' },
+        variable: { value: 'Vision' },
+        static: { value: 'Vision' },
       }
     }
   },
@@ -58,9 +58,10 @@ const MyAppHeader = () => {
 
   return (
     <View>
-      <Text style={{ fontSize: 24, padding: 16, color: 'black', fontFamily: 'Arial' }}>
+      <Image source={require('./assets/pf-logo-transparent.png')} style={{ alignSelf: 'center'}} />
+      {/* <Text style={{ fontSize: 30, padding: 16, color: 'black', fontFamily: 'Vision', textAlign: 'center' }}>
         Project Friendship
-      </Text>
+      </Text> */}
     </View>
   );
 };
@@ -87,7 +88,7 @@ function App() {
         Container={(props) => (
           <Authenticator.Container
             {...props}
-            style={{ backgroundColor: 'lightgray' }}
+            style={{ backgroundColor: 'cornsilk' }}
           />
         )}
         // custom header
