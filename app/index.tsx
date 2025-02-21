@@ -9,8 +9,10 @@ import {
   ThemeProvider
 } from '@aws-amplify/ui-react-native';
 
-import awsconfig from './src/aws-exports';
-import Home from './src/Home';
+import awsconfig from './aws-exports';
+import Home from './(tabs)/Home';
+import { Link } from 'expo-router';
+// import Home from './src/(tabs)/Home';
 Amplify.configure(awsconfig);
 
 const customTheme = {
@@ -58,10 +60,11 @@ const MyAppHeader = () => {
 
   return (
     <View>
-      <Image source={require('./assets/pf-logo-transparent.png')} style={{ alignSelf: 'center'}} />
+      <Image source={require('../assets/pf-logo-transparent.png')} style={{ alignSelf: 'center'}} />
       {/* <Text style={{ fontSize: 30, padding: 16, color: 'black', fontFamily: 'Vision', textAlign: 'center' }}>
         Project Friendship
       </Text> */}
+      <Link href='/(tabs)/Home'>Skip to home</Link>
     </View>
   );
 };
