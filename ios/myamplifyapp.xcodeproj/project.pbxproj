@@ -15,8 +15,8 @@
 		96905EF65AED1B983A6B3ABC /* libPods-myamplifyapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-myamplifyapp.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		EFAC4517ABF2476C95C74E71 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E87ED6928465F8926BEA6 /* noop-file.swift */; };
 		EF50251BB92540D8AF185398 /* Vision.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E8EF2B3F64463A4CAB540 /* Vision.otf */; };
+		EFAC4517ABF2476C95C74E71 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E87ED6928465F8926BEA6 /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,11 +32,11 @@
 		7A4D352CD337FB3A3BF06240 /* Pods-myamplifyapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myamplifyapp.release.xcconfig"; path = "Target Support Files/Pods-myamplifyapp/Pods-myamplifyapp.release.xcconfig"; sourceTree = "<group>"; };
 		8703CD6C9BC278799AF95B6A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = myamplifyapp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		9136DFB05F0C4D9D8F8B0F21 /* myamplifyapp-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "myamplifyapp-Bridging-Header.h"; path = "myamplifyapp/myamplifyapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A7E8EF2B3F64463A4CAB540 /* Vision.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Vision.otf; path = ../assets/fonts/Vision.otf; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = myamplifyapp/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-myamplifyapp/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		9A7E8EF2B3F64463A4CAB540 /* Vision.otf */ = {isa = PBXFileReference; name = "Vision.otf"; path = "../assets/fonts/Vision.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +125,15 @@
 			path = myamplifyapp/Supporting;
 			sourceTree = "<group>";
 		};
+		BBD8C7E36C554ACFA5E3604C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A7E8EF2B3F64463A4CAB540 /* Vision.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		D65327D7A22EEC0BE12398D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,15 +150,6 @@
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
-		};
-		BBD8C7E36C554ACFA5E3604C /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				9A7E8EF2B3F64463A4CAB540 /* Vision.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

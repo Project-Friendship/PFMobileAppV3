@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, Button } from 'react-native';
 import { getCurrentUser, signOut } from 'aws-amplify/auth'; 
-import { styles } from './HomeStyles'; 
+// import { styles } from './HomeStyles'; 
+import { StyleSheet } from 'react-native';
+
 
 const Home: React.FC = () => {
   const [user, setUser] = useState<{ username: string; attributes?: { email?: string } } | null>(
@@ -74,3 +76,37 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#f5f5f5',
+  },
+  welcomeText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  emailText: {
+    fontSize: 16,
+    color: '#666',
+    marginBottom: 20,
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#666',
+    textAlign: 'center',
+  },
+});
