@@ -63,11 +63,11 @@ const Events: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       // User-specific events
-      const userEvents = mockDatabase[userId ?? ''] || [];
+      const userEvents = mockDatabase[userId ?? ''] || []; // GET from database with userID / sessionId
       setEvents(userEvents);
 
       // All upcoming events (sorted by date)
-      const upcomingEvents = eventsDatabase
+      const upcomingEvents = eventsDatabase // GET from database
         .filter(event => new Date(event.date) >= new Date())
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
       setAllEvents(upcomingEvents);
@@ -83,13 +83,6 @@ const Events: React.FC = () => {
     } else {
       setModalVisible(true);
     }
-  };
-
-  const handleLeaveEvent = (event: Event) => {
-    const updatedEvents = events.filter(e => e.id !== event.id);
-    setEvents(updatedEvents);
-    alert(`You have left: ${event.title}`);
-    setModalVisible(false);
   };
 
   const handleCreateEvent = () => {
@@ -113,13 +106,20 @@ const Events: React.FC = () => {
     const isAlreadyJoined = events.some(e => e.id === event.id);
     
     if (!isAlreadyJoined) {
-      setEvents([...events, event]);
+      setEvents([...events, event]); // Will want to update database when we actually do this
       alert(`You have joined: ${event.title}`);
     } else {
       alert('You are already registered for this event');
     }
     
     setGlobalModalVisible(false);
+  };
+
+  const handleLeaveEvent = (event: Event) => {
+    const updatedEvents = events.filter(e => e.id !== event.id);  // Will want to update database when we actually do this
+    setEvents(updatedEvents);
+    alert(`You have left: ${event.title}`);
+    setModalVisible(false);
   };
 
   if (loading) {
