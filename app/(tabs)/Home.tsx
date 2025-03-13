@@ -3,6 +3,7 @@ import { View, Text, ActivityIndicator, Button } from 'react-native';
 import { getCurrentUser, signOut } from 'aws-amplify/auth'; 
 // import { styles } from './HomeStyles'; 
 import { StyleSheet } from 'react-native';
+import { router } from 'expo-router'; 
 
 
 const Home: React.FC = () => {
@@ -35,7 +36,8 @@ const Home: React.FC = () => {
     try {
       await signOut();
       console.log('User signed out successfully');
-      setUser(null); // Clear the user state
+      setUser(null); 
+      router.replace('/');
     } catch (error) {
       console.error('Error signing out:', error);
     }

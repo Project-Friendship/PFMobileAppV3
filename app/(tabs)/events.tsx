@@ -42,6 +42,21 @@ const Events: React.FC = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [globalModalVisible, setGlobalModalVisible] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+  const [createModalVisible, setCreateModalVisible] = useState(false);
+  const [newEvent, setNewEvent] = useState<Event>({
+    id: '',
+    title: '',
+    date: '',
+    location: '',
+    description: '',
+    category: '',
+  });
+
+  // THINGS TO DO:
+  // 1. Make the create event modal - started at the bottom
+  // 2. Make the create event button - set create event modal to true on click
+  // 3. Finish the handleCreateEvent method
+
 
   const { userId } = useLocalSearchParams() as { userId?: string };
 
@@ -70,6 +85,21 @@ const Events: React.FC = () => {
     }
   };
 
+  const handleLeaveEvent = (event: Event) => {
+    const updatedEvents = events.filter(e => e.id !== event.id);
+    setEvents(updatedEvents);
+    alert(`You have left: ${event.title}`);
+    setModalVisible(false);
+  };
+
+  const handleCreateEvent = () => {
+    //FILL LATER
+
+    //Add to global events
+
+    //Clear form, close modal
+  };
+
   const closeModal = (isGlobal: boolean = false) => {
     if (isGlobal) {
       setGlobalModalVisible(false);
@@ -77,6 +107,19 @@ const Events: React.FC = () => {
       setModalVisible(false);
     }
     setSelectedEvent(null);
+  };
+
+  const handleJoinEvent = (event: Event) => {
+    const isAlreadyJoined = events.some(e => e.id === event.id);
+    
+    if (!isAlreadyJoined) {
+      setEvents([...events, event]);
+      alert(`You have joined: ${event.title}`);
+    } else {
+      alert('You are already registered for this event');
+    }
+    
+    setGlobalModalVisible(false);
   };
 
   if (loading) {
@@ -90,6 +133,10 @@ const Events: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+
+      {/* Put button here */}
+
+
       {/* User Events Section */}
       <View style={styles.userEventsSection}>
         <Text style={styles.header}>My Events - {userId}</Text>
@@ -147,6 +194,14 @@ const Events: React.FC = () => {
               <Text style={styles.modalDetails}>Location: {selectedEvent.location}</Text>
               <Text style={styles.modalDescription}>{selectedEvent.description}</Text>
 
+              {/* Leave Event Button */}
+              <TouchableOpacity 
+                style={styles.leaveButton} 
+                onPress={() => handleLeaveEvent(selectedEvent)}
+              >
+                <Text style={styles.closeButtonText}>Leave Event</Text>
+              </TouchableOpacity>
+
               <TouchableOpacity style={styles.closeButton} onPress={() => closeModal()}>
                 <Text style={styles.closeButtonText}>Close</Text>
               </TouchableOpacity>
@@ -171,6 +226,18 @@ const Events: React.FC = () => {
               <Text style={styles.modalDetails}>Category: {selectedEvent.category}</Text>
               <Text style={styles.modalDescription}>{selectedEvent.description}</Text>
 
+              <TouchableOpacity 
+                style={[
+                  styles.joinButton, 
+                  events.some(e => e.id === selectedEvent.id) ? styles.joinedButton : null
+                ]} 
+                onPress={() => handleJoinEvent(selectedEvent)}
+              >
+                <Text style={styles.closeButtonText}>
+                  {events.some(e => e.id === selectedEvent.id) ? 'Already Joined' : 'Join Event'}
+                </Text>
+              </TouchableOpacity>
+
               <TouchableOpacity style={styles.closeButton} onPress={() => closeModal(true)}>
                 <Text style={styles.closeButtonText}>Close</Text>
               </TouchableOpacity>
@@ -178,6 +245,23 @@ const Events: React.FC = () => {
           </View>
         </Modal>
       )}
+
+      {/* Create Event Modal */}
+      <Modal
+        visible={createModalVisible}
+        animationType="slide"
+        transparent={true}
+        onRequestClose={() => setCreateModalVisible(false)}
+      >
+
+      <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Create New Event</Text>
+          </View>
+          {/* PUT FIELDS HERE - USE TextInput */}
+      </View>
+      </Modal>
+
     </SafeAreaView>
   );
 };
@@ -267,7 +351,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   closeButton: {
-    marginTop: 20,
+    marginTop: 10,
     padding: 10,
     backgroundColor: '#007BFF',
     borderRadius: 5,
@@ -277,4 +361,30 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
   },
+  joinButton: {
+    backgroundColor: '#007BFF',
+    padding: 10,
+    marginTop:10,
+    margin:'auto',
+    borderRadius: 5,
+    width: '100%',
+    alignItems: 'center',
+  },
+  joinedButton: {
+    backgroundColor: '#808080', 
+  },
+  leaveButton: {
+    backgroundColor: '#dc3545', 
+    padding: 10,
+    marginTop: 10,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    borderRadius: 5,
+    width: '100%',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+  }
 });
