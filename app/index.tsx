@@ -64,7 +64,7 @@ const MyAppHeader = () => {
       {/* <Text style={{ fontSize: 30, padding: 16, color: 'black', fontFamily: 'Vision', textAlign: 'center' }}>
         Project Friendship
       </Text> */}
-      <Link href='/(tabs)/Home'>Skip to home</Link>
+      {/* <Link href='/(tabs)/Home'>Skip to home</Link> */}
     </View>
   );
 };
