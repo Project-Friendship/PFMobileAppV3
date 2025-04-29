@@ -2,253 +2,361 @@
  {
    "title": "Flaherty's Northfield Lanes",
    "description": "Bowl with your mentee for FREE",
-   "tags": "Sports",
+   "tags": "Snack/Drink, In In Town",
    "url": "https://flahertysnorthfieldlanes.com/",
-   "logo": "wix:image://v1/76d451_42d3d2b0282646f0b0afe1669e11671e~mv2.png/rs=w_600,h_600,cg_true%5B1%5D_edited.png#originWidth=600&originHeight=241",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.441246,\"longitude\":-93.18172799999999},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"1700\",\"name\":\"Minnesota 3\",\"apt\":\"\",\"formattedAddressLine\":\"Flaherty's Northfield Lanes\"},\"formatted\":\"Flaherty's Northfield Lanes, Minnesota 3, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "18616c9d-a25c-4475-b137-e08e67b6cb2a",
-   "created": "2025-02-10T22:18:49Z",
-   "updated": "2025-02-11T00:25:29Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/Z4Rp7Zqq8gvDbAtY6",
+   "applemaps": "https://maps.apple.com/place?place-id=I9F33961C5540D10E&address=1700+MN-3%2C+Northfield%2C+MN+55057%2C+United+States&coordinate=44.4412134%2C-93.1818938&name=Flaherty%27s+Northfield+Lanes&_provider=9902"
  },
  {
    "title": "Fairfield Inn and Suites",
    "description": "Attend FREE breakfast and swimming",
-   "tags": "SnackDrink Sports",
+   "tags": "Snack/Drink, Sports, In In Town",
    "url": "https://www.marriott.com/en-us/hotels/mspnf-fairfield-inn-and-suites-northfield/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
-   "logo": "wix:image://v1/76d451_7d87ee02f9b94f429887c8779f391254~mv2.png/fi_logo_L%5B1%5D.png#originWidth=600&originHeight=180",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4591168,\"longitude\":-93.1606321},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"114\",\"name\":\"2nd Street West\",\"apt\":\"\",\"formattedAddressLine\":\"Fairfield Inn & Suites Northfield\"},\"formatted\":\"Fairfield Inn & Suites Northfield, 2nd Street West, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-1763\",\"subdivision\":\"MN\"}",
-   "id": "265873a6-4bc2-42b6-8c36-80476735a88c",
-   "created": "2025-02-10T22:17:53Z",
-   "updated": "2025-02-11T00:25:00Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/Sy4sYfoa4TGr744e8",
+   "applemaps": "https://maps.apple.com/place?place-id=I2F8EB9AD72E91765&address=114+Second+St+W%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4590646%2C-93.1608798&name=Fairfield+Inn+and+Suites+by+Marriott+Northfield&_provider=9902"
  },
  {
    "title": "Tin Tea",
    "description": "Buy 1 get 1 Free with your mentee",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In In Town",
    "url": "https://www.tinteamn.com/",
-   "logo": "wix:image://v1/76d451_6e8c1034d15542268aca7d6326d070fe~mv2.png/download%20(1).png#originWidth=1274&originHeight=532",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.438412,\"longitude\":-93.1824541},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"2010\",\"name\":\"Jefferson Road\",\"apt\":\"Suite C\",\"formattedAddressLine\":\"Tin Tea\"},\"formatted\":\"Tin Tea, Jefferson Road, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "2c8c3076-7a6a-4b56-a97a-7e87ccbde3db",
-   "created": "2025-02-10T21:58:31Z",
-   "updated": "2025-02-11T00:40:06Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/8mNnjhNGu7R54z2i9",
+   "applemaps": "https://maps.apple.com/place?place-id=I988E4BA6CC1A3621&address=2010+Jefferson+Rd%2C+Unit+C%2C+Northfield%2C+MN+55057%2C+United+States&coordinate=44.4383497%2C-93.1824323&name=Tin+Tea&_provider=9902"
  },
  {
    "title": "The Hideaway",
    "description": "Buy 1 get 1 50% off",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In Town",
    "url": "https://www.thehideawaynorthfield.com/",
-   "logo": "wix:image://v1/76d451_7e6354bd62c04d9d9992054148cadb3b~mv2.png/Circle+Logo+transparent-363w%5B1%5D.png#originWidth=360&originHeight=360",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.455499,\"longitude\":-93.15990699999999},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"421\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"The HideAway Coffeehouse and Wine Bar\"},\"formatted\":\"The HideAway Coffeehouse and Wine Bar, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-2019\",\"subdivision\":\"MN\"}",
-   "id": "3abb333a-1095-4e98-9e7b-aeb9681d3be8",
-   "created": "2025-02-10T22:23:27Z",
-   "updated": "2025-02-11T00:26:23Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/Gc4evbXaAcwXLxSCA",
+   "applemaps": "https://maps.apple.com/place?place-id=I4F9B8EFCEBEFAF3A&address=421+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4554968%2C-93.159844&name=The+Hideaway+Coffeehouse+And+Winebar+-+Northfield&_provider=9902"
  },
  {
    "title": "Northfield Arts Guild",
    "description": "Free open art and $5 off theater tickets",
-   "tags": "Entertainment",
+   "tags": "Entertainment, In Town",
    "url": "https://northfieldartsguild.org/",
-   "logo": "wix:image://v1/76d451_cf36e7106f33485390cf34e3cb92627c~mv2.png/northfield-arts-guild-logo%5B1%5D_edited.png#originWidth=209&originHeight=107",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.45731800000001,\"longitude\":-93.159962},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"304\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Northfield Arts Guild\"},\"formatted\":\"Northfield Arts Guild, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-2015\",\"subdivision\":\"MN\"}",
-   "id": "3d2561cf-a3c7-4038-8731-29409065f4c0",
-   "created": "2025-02-10T22:14:06Z",
-   "updated": "2025-02-11T00:30:26Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/5vCjZkPZwM7PE1hZ7",
+   "applemaps": "https://maps.apple.com/place?place-id=I7095107CECB89FB8&address=411+W+Third+St%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4570134%2C-93.1658295&name=Northfield+Arts+Guild+Theater&_provider=9902"
  },
  {
    "title": "Cannon Valley Maker Space",
    "description": "Attend free with your mentee",
-   "tags": "Crafts",
+   "tags": "Crafts, In Town",
    "url": "https://cannonvalleymakers.org/",
-   "logo": "wix:image://v1/76d451_7423f416361a41b98b134703bbae342a~mv2.png/CVM_120_120_Logo%5B1%5D.png#originWidth=120&originHeight=120",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Dundas\",\"name\":\"Dundas\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Dundas\",\"location\":{\"latitude\":44.43115539999999,\"longitude\":-93.2066511},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"300\",\"name\":\"Railway Street\",\"apt\":\"\",\"formattedAddressLine\":\"Cannon Valley Makers\"},\"formatted\":\"Cannon Valley Makers, Railway Street, Dundas, MN, USA\",\"country\":\"US\",\"postalCode\":\"55019\",\"subdivision\":\"MN\"}",
-   "id": "412ebdfc-ea02-4c84-9ca3-7e3478b6f253",
-   "created": "2025-02-10T22:14:43Z",
-   "updated": "2025-02-11T00:28:19Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/fUghzVAkWUXYCR2VA",
+   "applemaps": "https://maps.apple.com/place?place-id=I1E9C32B7F45DD22C&address=300+Railway+St+N%2C+Dundas%2C+MN++55019%2C+United+States&coordinate=44.4310559%2C-93.2066353&name=Cannon+Valley+Makers&_provider=9902"
  },
  {
    "title": "Han's Kitchen",
    "description": "Buy 1 get 1 FREE apps and smoothies",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In Town",
    "url": "https://www.facebook.com/p/Hans-Kitchen-100094234617621/",
-   "logo": "wix:image://v1/76d451_f573e524aef6428e921362740926f8da~mv2.jpg/452052641_348883041596180_982765003957335281_n.jpg#originWidth=200&originHeight=200",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4570205,\"longitude\":-93.162098},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"304\",\"name\":\"Water Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Han's Kitchen\"},\"formatted\":\"Han's Kitchen, Water Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "5126f709-acc6-4bd7-916d-b75fa6c23d5d",
-   "created": "2025-02-10T21:55:49Z",
-   "updated": "2025-02-11T00:45:41Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/QxXkcXyEEBGsmguf9",
+   "applemaps": "https://maps.apple.com/place?place-id=I8F02BE79874898F6&address=304+Water+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4570418%2C-93.1621367&name=Han%27s+Kitchen&_provider=9902"
  },
  {
    "title": "Games & Geek",
    "description": "20% off your purchase",
-   "tags": "Entertainment",
+   "tags": "Games, In Town",
    "url": "https://www.facebook.com/gamesngeek/",
-   "logo": "wix:image://v1/76d451_e683f7bf60c241c08d2350884f33d40a~mv2.jpg/302138742_478694014264354_1521201840071327906_n_edited.jpg#originWidth=1334&originHeight=783",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4574048,\"longitude\":-93.1598089},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"302\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Games n Geek & Anime!\"},\"formatted\":\"Games n Geek & Anime!, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "6275e6a1-7d3c-4c78-a0e7-0f324442ff6d",
-   "created": "2025-02-10T21:59:02Z",
-   "updated": "2025-02-11T00:37:28Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/TpVMo9UJrNFNm4ma6",
+   "applemaps": "https://maps.apple.com/place?place-id=ICE53E19DC77D6B7E&address=302+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4573864%2C-93.1598943&name=Games+N+Geek&_provider=9902"
  },
  {
    "title": "Robin's Egg Bakery",
    "description": "Buy 1 get 1 FREE with your mentee",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In Town",
    "url": "https://www.facebook.com/p/The-Robins-Egg-61553880419394/",
-   "logo": "wix:image://v1/76d451_7de6bfdb81414b99ade13e67435cf756~mv2.jpg/405096578_122097477488129347_965438105424893822_n.jpg#originWidth=240&originHeight=241",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4556801,\"longitude\":-93.1604164},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"410\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"The Robin's Egg\"},\"formatted\":\"The Robin's Egg, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "7392a106-ddeb-4b1c-8179-26943d90553e",
-   "created": "2025-02-10T21:54:40Z",
-   "updated": "2025-02-11T00:47:08Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/deMarXksSr1v3rVs5",
+   "applemaps": "https://maps.apple.com/place?place-id=ICAD98C63B19F647&address=410+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.455671%2C-93.160478&name=The+Robin%E2%80%99s+Egg&_provider=9902"
  },
  {
    "title": "Cannon Valley Cinema 10",
    "description": "Free movie passes (requires a 24 hour notice)",
-   "tags": "Entertainment",
+   "tags": "Entertainment, In Town",
    "url": "https://www.cabbtheatres.com/",
-   "logo": "wix:image://v1/76d451_c8e46a5fa564498d8853e32fc3d685c3~mv2.png/0ddc2c6dbbde00a842b7425586d14929%5B1%5D.png#originWidth=250&originHeight=144",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Dundas\",\"name\":\"Dundas\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Dundas\",\"location\":{\"latitude\":44.42887320000001,\"longitude\":-93.19762329999999},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"404\",\"name\":\"Schilling Drive\",\"apt\":\"\",\"formattedAddressLine\":\"Cannon Valley Cinema 10\"},\"formatted\":\"Cannon Valley Cinema 10, Schilling Drive, Dundas, MN, USA\",\"country\":\"US\",\"postalCode\":\"55019\",\"subdivision\":\"MN\"}",
-   "id": "7fbec20a-857a-43c3-80a2-23adb9f61c17",
-   "created": "2025-02-10T22:16:00Z",
-   "updated": "2025-02-11T00:24:38Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/2R61BjhFedFmd3kh7",
+   "applemaps": "https://maps.apple.com/place?place-id=I484100DC6B1B0C83&address=404+Schilling+Dr+N%2C+Dundas%2C+MN++55019%2C+United+States&coordinate=44.4289185%2C-93.1978878&name=Cannon+Valley+Cinema+10&_provider=9902"
  },
  {
-   "title": "Northfield School Activities",
+   "title": "Northfield Schools",
    "description": "Attend a non-sectional game, FREE (requires a 24 hour notice)",
-   "tags": "Entertainment",
+   "tags": "Entertainment, In Town",
    "url": "https://northfieldschools.org/",
-   "logo": "wix:vector://v1/76d451_5783baa4a35e4309a80df087b771ef05.svg/northfield-schools-logo-150%5B1%5D.svg",
-   "address": "{\"subdivisions\":[{\"code\":\"CO\",\"name\":\"Colorado\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Denver County\",\"name\":\"Denver County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Denver\",\"name\":\"Denver\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"Northeast\",\"name\":\"Northeast\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_4\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Denver\",\"location\":{\"latitude\":39.7976002,\"longitude\":-104.8839128},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"5500\",\"name\":\"Central Park Boulevard\",\"apt\":\"\",\"formattedAddressLine\":\"Northfield High School\"},\"formatted\":\"Northfield High School, Central Park Boulevard, Denver, CO, USA\",\"country\":\"US\",\"postalCode\":\"80238-3385\",\"subdivision\":\"CO\"}",
-   "id": "8b9332d9-ea97-4dac-bce6-b8fa824246c0",
-   "created": "2025-02-10T22:20:19Z",
-   "updated": "2025-02-11T00:25:41Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/mGUUnxFTuw4jGhZa9",
+   "applemaps": "https://maps.apple.com/place?place-id=IE31BE918CBC4F8A3&address=1400+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4448107%2C-93.164041&name=Northfield+High+School&_provider=9902"
  },
  {
    "title": "Farmstead Bike Shop",
    "description": "Free bike rentals & BOGO in the cafe",
-   "tags": "SnackDrink Sports",
+   "tags": "Snack/Drink, Sports, In Town",
    "url": "https://www.farmsteadbikeshop.com/nfld",
-   "logo": "wix:image://v1/76d451_aea1498e50844373bab4e0b11eec7cdf~mv2.png/Farmstead+Outdoor+Adventures+Logo%5B1%5D.png#originWidth=1000&originHeight=366",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.455279,\"longitude\":-93.160551},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"422\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Farmstead Bike Shop\"},\"formatted\":\"Farmstead Bike Shop, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "8fd8ffe6-6346-4cf7-acee-75011104f433",
-   "created": "2025-02-10T22:11:29Z",
-   "updated": "2025-02-11T00:33:01Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/NXi6vbkLrJB8zWkS8",
+   "applemaps": "https://maps.apple.com/place?place-id=IAD178D7CE29912B6&address=422+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4552785%2C-93.1605508&name=Farmstead+Bike+Shop&_provider=9902"
  },
  {
    "title": "The Goat",
    "description": "Free Coloring poster for you and your mentee",
-   "tags": "Crafts",
+   "tags": "Crafts, In Town",
    "url": "https://business.northfieldchamber.com/list/member/the-goat-506",
-   "logo": "wix:image://v1/76d451_427dcf3391104022986185b850734971~mv2.jpg/MemPageHeader_Front%20Window%20-%20The%20Goat%5B1%5D.jpg#originWidth=348&originHeight=225",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.45578459999999,\"longitude\":-93.1599655},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"413\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"The Goat\"},\"formatted\":\"The Goat, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "9eb7dd78-88b7-4c11-bc06-fdc4da1cd02b",
-   "created": "2025-02-10T22:13:08Z",
-   "updated": "2025-02-11T00:31:33Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/dY6tUPWuwW665ZjK8",
+   "applemaps": "https://maps.apple.com/place?place-id=IFF2386377F060F60&address=413+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4557332%2C-93.1597085&name=The+Goat&_provider=9902"
  },
  {
-   "title": "Northfield History Center",
+   "title": "Northfield Historical Society",
    "description": "Free Admission",
-   "tags": "Entertainment",
+   "tags": "Entertainment, In Town",
    "url": "https://www.northfieldhistory.org/",
-   "logo": "wix:image://v1/76d451_0fc8ebb5abe544409f98cb6373966cc3~mv2.png/006+Northfield+History+Center%5B1%5D_edited.png#originWidth=1041&originHeight=717",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4558095,\"longitude\":-93.1603644},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"408\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Northfield Historical Society\"},\"formatted\":\"Northfield Historical Society, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "ab317075-94b7-4e2a-bd41-45355d9d45e8",
-   "created": "2025-02-10T22:15:18Z",
-   "updated": "2025-02-11T00:24:27Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/9MguYkWaZngXVZaP9",
+   "applemaps": "https://maps.apple.com/place?place-id=I75A3A3756D5EEDE&address=408+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.455822%2C-93.1604365&name=Northfield+Historical+Society&_provider=9902"
  },
  {
    "title": "James Gang Coffeehouse",
    "description": "30% off your entire order",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In Town",
    "url": "https://www.jamesgangcoffeehouse.com/",
-   "logo": "wix:image://v1/76d451_a217febaaa4d49aebb153f9eff3e312e~mv2.jpg/JG%20Centered%20Logo%20with%20TAGLINE-1%20copy%5B1%5D.jpg#originWidth=290&originHeight=141",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4376826,\"longitude\":-93.18326139999999},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"2018\",\"name\":\"Jefferson Road\",\"apt\":\"H\",\"formattedAddressLine\":\"James Gang Coffeehouse & Eatery\"},\"formatted\":\"James Gang Coffeehouse & Eatery, Jefferson Road, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-3262\",\"subdivision\":\"MN\"}",
-   "id": "b339dc1e-6774-43f4-9a3b-3fbf3146c0af",
-   "created": "2025-02-10T22:22:31Z",
-   "updated": "2025-02-11T00:26:10Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/qbC66XxinGVDQiMTA",
+   "applemaps": "https://maps.apple.com/place?place-id=IB1457516FC8439C4&address=2018+Jefferson+Rd%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4376798%2C-93.1832598&name=James+Gang+Coffeehouse+%26+Eatery&_provider=9902"
  },
  {
-   "title": "Good Bye Blue Monday",
+   "title": "Goodbye Blue Monday",
    "description": "Buy 1 get 1 small hot chocolate",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In Town",
    "url": "https://www.gbmcoffee.com/",
-   "logo": "wix:image://v1/76d451_e04e6ea84f8e4bd6ab4bfcdfeda42cc2~mv2.jpg/Goodbye+Blue+Logo-2%5B1%5D.jpg#originWidth=1224&originHeight=792",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4566831,\"longitude\":-93.1597263},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"319\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Goodbye Blue Monday Coffeehouse\"},\"formatted\":\"Goodbye Blue Monday Coffeehouse, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-2129\",\"subdivision\":\"MN\"}",
-   "id": "bfde7e38-9091-48b4-ae48-77bf64d3fd44",
-   "created": "2025-02-10T22:21:41Z",
-   "updated": "2025-02-11T00:25:53Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/8ba2apEPi8RzKPFz6",
+   "applemaps": "https://maps.apple.com/place?place-id=IB77C6882EE4A0069&address=319+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4566837%2C-93.1596205&name=Goodbye+Blue+Monday+Coffee+House&_provider=9902"
  },
  {
    "title": "The Blast",
    "description": "Free kids cone or Smoothie with any purchase",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In Town",
    "url": "https://www.facebook.com/blastnfld/",
-   "logo": "wix:image://v1/76d451_bf5bc42384d74a0990884df4d3bdab72~mv2.jpg/304844832_491756119623947_8396905499945491617_n.jpg#originWidth=1536&originHeight=2048",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4576535,\"longitude\":-93.1599136},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"220\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"The Blast Northfield\"},\"formatted\":\"The Blast Northfield, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-2015\",\"subdivision\":\"MN\"}",
-   "id": "cf79a8fc-75e2-415e-ac80-82674df7c306",
-   "created": "2025-02-10T21:54:06Z",
-   "updated": "2025-02-11T00:48:31Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/ysU8tf8HLqiCsYqw6",
+   "applemaps": "https://maps.apple.com/place?place-id=I3049652A67DE1317&address=220+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4574563%2C-93.1597348&name=The+Blast+Northfield&_provider=9902"
  },
  {
    "title": "Northfield Yarn",
    "description": "Free bracelet making supplies",
-   "tags": "Crafts",
+   "tags": "Crafts, In Town",
    "url": "https://www.northfieldyarn.com/",
-   "logo": "wix:image://v1/76d451_1a0e476b34134fa3a57fcb5cdd37110b~mv2.png/LogoPrimary_1705028176%5B1%5D.png#originWidth=1662&originHeight=456",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4569125,\"longitude\":-93.1600643},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"314\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Northfield Yarn\"},\"formatted\":\"Northfield Yarn, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-4003\",\"subdivision\":\"MN\"}",
-   "id": "cfccaa4b-bffd-4d5a-a733-fd8e845b76c0",
-   "created": "2025-02-10T22:10:51Z",
-   "updated": "2025-02-11T00:34:10Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/bMs33N1xvskirXoJ9",
+   "applemaps": "https://maps.apple.com/place?place-id=I93B977E605F3F562&address=314+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4569352%2C-93.1600612&name=Northfield+Yarn&_provider=9902"
  },
  {
    "title": "Nautical Bowls",
    "description": "Buy 1 get 1 50% off",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In Town",
    "url": "https://nauticalbowls.com/store/northfield-mn/",
-   "logo": "wix:image://v1/76d451_65b627b7d2954a8bb624697b2816780b~mv2.jpg/images%5B1%5D.jpg#originWidth=224&originHeight=225",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.455379,\"longitude\":-93.1606517},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"420\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Nautical Bowls\"},\"formatted\":\"Nautical Bowls, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057\",\"subdivision\":\"MN\"}",
-   "id": "d61cd5eb-55bc-436c-b70f-ab9b0ef1c84b",
-   "created": "2025-02-10T21:57:49Z",
-   "updated": "2025-02-11T00:43:24Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/erMfamTesmyLS2nbA",
+   "applemaps": "https://maps.apple.com/place?place-id=ID9AB5166396676C5&address=420+Division+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4553647%2C-93.160522&name=Nautical+Bowls&_provider=9902"
  },
  {
    "title": "Dundas Dome",
    "description": "Attend Open Dome Free with your mentee",
-   "tags": "Sports",
+   "tags": "Sports, In Town",
    "url": "https://www.dundasdome.com/",
-   "logo": "wix:image://v1/76d451_cefe21b7a23c4fc689a6b592a1afaa8b~mv2.png/DUNDAS%20DOME%20FINAL_edited%5B1%5D.png#originWidth=392&originHeight=155",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.4333715,\"longitude\":-93.1925523},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"2033-2198\",\"name\":\"Cannon Road\",\"apt\":\"\",\"formattedAddressLine\":\"Dundas Soccer Dome\"},\"formatted\":\"Dundas Soccer Dome, Cannon Road, Dundas, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-3608\",\"subdivision\":\"MN\"}",
-   "id": "d9454a6e-c210-445e-8b2d-b09ab3594077",
-   "created": "2025-02-10T22:17:16Z",
-   "updated": "2025-02-11T00:24:45Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/NN2Cb969EnL3xiJ9A",
+   "applemaps": "https://maps.apple.com/place?place-id=I35A1FFD594DC20D2&address=901+Cannon+Rd%2C+Dundas%2C+MN+55019%2C+United+States&coordinate=44.4335951%2C-93.1921678&name=Dundas+Dome&_provider=9902"
  },
  {
-   "title": "Cake Walk",
+   "title": "Cakewalk",
    "description": "20% off your purchase",
-   "tags": "SnackDrink",
+   "tags": "Snack/Drink, In Town",
    "url": "https://www.cakewalknorthfield.com/",
-   "logo": "wix:image://v1/76d451_77604591657f4c17a2cfc561d4fe0870~mv2.png/14a63f_0f6be16597be52916fdffa294bc2e7f5%5B1%5D.png#originWidth=214&originHeight=218",
-   "address": "{\"subdivisions\":[{\"code\":\"MN\",\"name\":\"Minnesota\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_1\"},{\"code\":\"Rice County\",\"name\":\"Rice County\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_2\"},{\"code\":\"Northfield\",\"name\":\"Northfield\",\"type\":\"ADMINISTRATIVE_AREA_LEVEL_3\"},{\"code\":\"US\",\"name\":\"United States\",\"type\":\"COUNTRY\"}],\"city\":\"Northfield\",\"location\":{\"latitude\":44.45718180000001,\"longitude\":-93.15952589999999},\"countryFullname\":\"United States\",\"streetAddress\":{\"number\":\"303\",\"name\":\"Division Street South\",\"apt\":\"\",\"formattedAddressLine\":\"Cakewalk\"},\"formatted\":\"Cakewalk, Division Street South, Northfield, MN, USA\",\"country\":\"US\",\"postalCode\":\"55057-2016\",\"subdivision\":\"MN\"}",
-   "id": "e8f81d5e-3024-4770-a77e-05e0695e787b",
-   "created": "2025-02-10T21:57:06Z",
-   "updated": "2025-02-11T00:44:19Z",
-   "owner": "76d45110-2d2c-4b38-9395-d14228afa5cd"
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/i93GQxTHaSpeLGXv7",
+   "applemaps": "https://maps.apple.com/place?place-id=IA25E366A11CFACA3&address=303+Division+St%2C+Northfield%2C+MN+55057%2C+United+States&coordinate=44.4571731%2C-93.1594123&name=CakeWalk+Custom+Cakes+%26+Dessert+Bar&_provider=9902"
+ },
+ {
+   "title": "The Libe",
+   "description": "Puzzles and games by the entrance, children's books in the Rookery",
+   "tags": "Games, Carleton",
+   "url": "https://www.carleton.edu/library/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/DDvhaHd8YpQWPNKA8",
+   "applemaps": "https://maps.apple.com/place?place-id=IA606C53656D2BFDB&address=1+N+College+St%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.46234%2C-93.154667&name=Gould+Library&_provider=9902"
+ },
+ {
+   "title": "Dacie Moses",
+   "description": "Games, a piano, and 24/7 baking ingredients and materials",
+   "tags": "Games, Crafts, Carleton",
+   "url": "https://www.carleton.edu/dacie/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/Wa8fm5NXgnD2f4aYA",
+   "applemaps": "https://maps.apple.com/place?address=110+Union+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4590566%2C-93.1573287&name=110+Union+St+S"
+ },
+ {
+   "title": "Rec Center",
+   "description": "Check out balls and sports equipment from the front desk, including winter sports gear",
+   "tags": "Sports, Winter Sports, Carleton",
+   "url": "https://www.carleton.edu/recreation/facilities/hours/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/M5rYq7ipESYAuBkR6",
+   "applemaps": "https://maps.apple.com/place?place-id=I423AF4A6B7FCF2CE&address=501+Three+Oaks+Dr%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4641426%2C-93.1495115&name=Recreation+Center&_provider=9902"
+ },
+ {
+   "title": "Hulings Aquariums",
+   "description": "Aquariums on 1st and 2nd floors",
+   "tags": "Entertainment, Carleton",
+   "url": "",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/3DBJ9qDuPi3VNaSr5",
+   "applemaps": "https://maps.apple.com/place?place-id=I62385C5B4EF8027D&address=1+N+College+St%2C+Northfield%2C+MN+55057%2C+United+States&coordinate=44.46097%2C-93.153141&name=Carleton+-+Hulings+Hall&_provider=9902"
+ },
+ {
+   "title": "Perlman Teaching Museum",
+   "description": "On the left after entering. Changes every term.",
+   "tags": "Entertainment, Carleton",
+   "url": "https://www.carleton.edu/museum/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/Fw7dFTHZVJHBbxBk8",
+   "applemaps": "https://maps.apple.com/place?place-id=IB7385B73F3BD767E&address=301+Union+St+S%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4570418%2C-93.1562197&name=Weitz+Center+for+Creativity&_provider=9902"
+ },
+ {
+   "title": "Sayles-Hill Campus Center",
+   "description": "Play pool or foosball on the 2nd floor, or grab a snack",
+   "tags": "Games, Snack/Drink, Carleton",
+   "url": "",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/1F16cuRkSJ5BS6Vt7",
+   "applemaps": "https://maps.apple.com/place?place-id=IFE4E5A726DAA8A78&address=1+N+College+St%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4613263%2C-93.1560749&name=Sayles+Hill+Campus+Center&_provider=9902"
+ },
+ {
+   "title": "Carleton CCCE",
+   "description": "Ask about board games and art supplies. Open 9-5 M-F",
+   "tags": "Games, Crafts, Carleton",
+   "url": "https://www.carleton.edu/ccce/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/MaFQ3ro3Ly24152o9",
+   "applemaps": "https://maps.apple.com/place?place-id=IFE4E5A726DAA8A78&address=1+N+College+St%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4613263%2C-93.1560749&name=Sayles+Hill+Campus+Center&_provider=9902"
+ },
+ {
+   "title": "Ground Evans",
+   "description": "Play pool or foosball",
+   "tags": "Games, Carleton",
+   "url": "",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/xYzHUraU6AL57XvW7",
+   "applemaps": "https://maps.apple.com/place?place-id=I2CB7DFF42E30110A&address=715+Evans+Dr%2C+Northfield%2C+MN+55057%2C+United+States&coordinate=44.4605257%2C-93.1496901&name=Evans+Hall&_provider=9902"
+ },
+ {
+   "title": "Central Park",
+   "description": "Playground with swings and a nice greenspace",
+   "tags": "Sports, Carleton",
+   "url": "",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/SRbEgJY12tmy8DWF6",
+   "applemaps": "https://maps.apple.com/place?place-id=I98E6F2BA4C41CD39&address=421+E+Fourth+St%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4570302%2C-93.1546407&name=Central+Park&_provider=9902"
+ },
+ {
+   "title": "Sledding at Carleton",
+   "description": "At Bell Field hill, behind Evans Hall",
+   "tags": "Sports, Winter Sports, Carleton",
+   "url": "",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/jzRtPMTSr9bkRuMu5",
+   "applemaps": "https://maps.apple.com/place?place-id=ID514273714499C07&address=1+N+College+St%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4600513%2C-93.1482697&name=Bell+Field&_provider=9902"
+ },
+ {
+   "title": "Skoglund Athletic Center",
+   "description": "Check out sports equipment from the front desk, including winter sports gear from 2-4pm M-F",
+   "tags": "Sports, St. Olaf",
+   "url": "https://wp.stolaf.edu/recreation/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/AjMFmNJXQjKnvXpCA",
+   "applemaps": "https://maps.apple.com/place?place-id=IFB563B65D06EA955&address=1520+St+Olaf+Ave%2C+Northfield%2C+MN+55057%2C+United+States&coordinate=44.4632987%2C-93.1874041&name=Skoglund+Athletic+Center&_provider=9902"
+ },
+ {
+   "title": "Disc Golf",
+   "description": "The course goes through the Natural Lands. The first hole is behind Hoyme Hall",
+   "tags": "Sports, St. Olaf",
+   "url": "https://udisc.com/courses/st-olaf-college-dgc-PRpb",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/z2EjP8XK6EDArmyQ6",
+   "applemaps": "https://maps.apple.com/place?place-id=I8FB45198D22463D8&address=1520+St+Olaf+Ave%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.460557%2C-93.1869054&name=Hoyme+Hall&_provider=9902"
+ },
+ {
+   "title": "Office of Student Activities",
+   "description": "Check out chalk for sidewalk drawing",
+   "tags": "Crafts, St. Olaf",
+   "url": "https://wp.stolaf.edu/sga/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/TWNhaK8wK9XeJnAF6",
+   "applemaps": "https://maps.apple.com/place?place-id=I1427F6F4C55B216D&address=1520+St+Olaf+Ave%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.461848%2C-93.18295&name=Buntrock+Commons&_provider=9902"
+ },
+ {
+   "title": "Sledding at St. Olaf",
+   "description": "Sledding on Old Main Hill, Thorson Hill, or Hoyme Hill",
+   "tags": "Sports, Winter Sports, St. Olaf",
+   "url": "",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/fK4BE1xjZ9Exn8wr7",
+   "applemaps": "https://maps.apple.com/place?place-id=I1EAB8A2168B20DBD&address=1406+Norway+Valley+Dr%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4592912%2C-93.1802886&name=Old+Main+%28OM%29&_provider=9902"
+ },
+ {
+   "title": "Buntrock Commons",
+   "description": "Arts and crafts, snacks, pool, computers",
+   "tags": "Snack/Drink, Crafts, Games, St. Olaf",
+   "url": "https://wp.stolaf.edu/buntrock/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/TWNhaK8wK9XeJnAF6",
+   "applemaps": "https://maps.apple.com/place?place-id=I1427F6F4C55B216D&address=1520+St+Olaf+Ave%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.461848%2C-93.18295&name=Buntrock+Commons&_provider=9902"
+ },
+ {
+   "title": "Rolvagg Library",
+   "description": "Games and puzzles on the 3rd floor",
+   "tags": "Games, St. Olaf",
+   "url": "https://wp.stolaf.edu/library/rolvaag-library/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/NMW1KLshJjWsW5We9",
+   "applemaps": "https://maps.apple.com/place?place-id=I41FABC1CAF01D1C3&address=1510+St+Olaf+Ave%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.461317%2C-93.18212&name=Rolvaag+Memorial+Library&_provider=9902"
+ },
+ {
+   "title": "Regents Hall (Math)",
+   "description": "Board games and computers on the top floor",
+   "tags": "Games, Entertainment, St. Olaf",
+   "url": "",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/ef7ex5KmwBdYxUNo9",
+   "applemaps": "https://maps.apple.com/place?place-id=I3CB6A2930C583A11&address=1520+St+Olaf+Ave%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4600743%2C-93.1835085&name=Tomson+Hall&_provider=9902"
+ },
+ {
+   "title": "Regents Hall (Sciences)",
+   "description": "Greenhouse and fish tanks and turtle tanks on the 4th floor",
+   "tags": "Entertainment, St. Olaf",
+   "url": "",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/UywcM8awPsuZF5no8",
+   "applemaps": "https://maps.apple.com/place?place-id=I431DF96BD9A10AE6&address=1408+Norway+Valley+Dr%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4591796%2C-93.1818683&name=Regents+Hall+of+Natural+Sciences&_provider=9902"
+ },
+ {
+   "title": "Flaten Art Museum",
+   "description": "In the Center for Art and Dance",
+   "tags": "Entertainment, St. Olaf",
+   "url": "https://wp.stolaf.edu/flaten/",
+   "logo": "",
+   "googlemaps": "https://maps.app.goo.gl/NuuhBXufs5TethTw7",
+   "applemaps": "https://maps.apple.com/place?place-id=I3789857F4B5A5E39&address=1520+St+Olaf+Ave%2C+Northfield%2C+MN++55057%2C+United+States&coordinate=44.4626785%2C-93.1848305&name=Center+for+Art+and+Dance&_provider=9902"
  }
 ]
