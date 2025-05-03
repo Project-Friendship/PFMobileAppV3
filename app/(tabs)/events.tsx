@@ -13,6 +13,7 @@ import {
   Platform
 } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
+import { Calendar } from 'react-native-calendars';
 
 interface Event {
   id: string;
@@ -92,6 +93,7 @@ const Events: React.FC = () => {
   const [leaveConfirmModalVisible, setLeaveConfirmModalVisible] = useState(false);
   const [selectedLeaveReason, setSelectedLeaveReason] = useState('');
   const [otherReason, setOtherReason] = useState('');
+  const [calendarVisible, setCalendarVisible] = useState(false);
 
   const { userId } = useLocalSearchParams() as { userId?: string };
 
@@ -204,6 +206,7 @@ const Events: React.FC = () => {
     });
     setSelectedCategory('');
     setCreateModalVisible(false);
+    setCalendarVisible(false); // Make sure to reset calendar visibility too
 
     // Show confirmation
     alert(`Event "${eventToAdd.title}" created successfully!`);
@@ -285,6 +288,27 @@ const Events: React.FC = () => {
       default:
         break;
     }
+  };
+
+  const handleDateSelect = (day: any) => {
+    console.log("Day selected:", day); // Add logging to verify selection
+    
+    // Format is YYYY-MM-DD
+    const selectedDate = day.dateString;
+    
+    // Update the new event with the selected date
+    setNewEvent({
+      ...newEvent,
+      date: selectedDate,
+    });
+    
+    // Keep the calendar visible - don't close automatically
+    // The user will close it with the hide calendar button
+  };
+
+  // Toggle calendar visibility
+  const toggleCalendar = () => {
+    setCalendarVisible(!calendarVisible);
   };
 
   if (loading) {
@@ -569,7 +593,10 @@ const Events: React.FC = () => {
         visible={createModalVisible}
         animationType="slide"
         transparent={true}
-        onRequestClose={() => setCreateModalVisible(false)}
+        onRequestClose={() => {
+          setCalendarVisible(false);
+          setCreateModalVisible(false);
+        }}
       >
         <View style={styles.modalOverlay}>
           <View style={styles.createModalContent}>
@@ -586,13 +613,47 @@ const Events: React.FC = () => {
               />
               
               {/* Event Date */}
-              <Text style={styles.inputLabel}>Event Date (YYYY-MM-DD):</Text>
-              <TextInput
-                style={styles.input}
-                placeholder="YYYY-MM-DD"
-                value={newEvent.date}
-                onChangeText={handleDateChange}
-              />
+              <Text style={styles.inputLabel}>Event Date:</Text>
+              
+              {/* Show either the date picker button or the calendar based on calendarVisible state */}
+              {!calendarVisible ? (
+                <TouchableOpacity 
+                  style={styles.datePickerButton} 
+                  onPress={toggleCalendar}
+                >
+                  <Text style={styles.dateText}>{newEvent.date}</Text>
+                  <Text style={styles.datePickerIcon}>📅</Text>
+                </TouchableOpacity>
+              ) : (
+                <View style={styles.calendarContainer}>
+                  <Calendar
+                    onDayPress={handleDateSelect}
+                    markedDates={{
+                      [newEvent.date]: {selected: true, selectedColor: '#007BFF'}
+                    }}
+                    minDate={new Date().toISOString().split('T')[0]}
+                    theme={{
+                      selectedDayBackgroundColor: '#007BFF',
+                      todayTextColor: '#28a745',
+                      arrowColor: '#007BFF',
+                      backgroundColor: '#ffffff',
+                      calendarBackground: '#ffffff',
+                      textSectionTitleColor: '#b6c1cd',
+                      selectedDayTextColor: '#ffffff',
+                      dayTextColor: '#2d4150',
+                      textDisabledColor: '#d9e1e8',
+                      monthTextColor: '#2d4150',
+                      indicatorColor: '#007BFF'
+                    }}
+                  />
+                  <TouchableOpacity 
+                    style={styles.hideCalendarButton} 
+                    onPress={toggleCalendar}
+                  >
+                    <Text style={styles.buttonText}>Hide Calendar</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
               
               {/* Event Location */}
               <Text style={styles.inputLabel}>Location:</Text>
@@ -640,7 +701,10 @@ const Events: React.FC = () => {
               <View style={styles.createModalButtons}>
                 <TouchableOpacity 
                   style={styles.cancelButton} 
-                  onPress={() => setCreateModalVisible(false)}
+                  onPress={() => {
+                    setCalendarVisible(false);
+                    setCreateModalVisible(false);
+                  }}
                 >
                   <Text style={styles.buttonText}>Cancel</Text>
                 </TouchableOpacity>
@@ -854,14 +918,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     fontWeight: '500',
   },
-  datePickerButton: {
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 5,
-    padding: 10,
-    marginBottom: 16,
-    backgroundColor: '#fff',
-  },
   createModalButtons: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -935,5 +991,39 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: '48%',
     alignItems: 'center',
-  }
+  },
+  datePickerButton: {
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 16,
+    backgroundColor: '#fff',
+    height: 44,
+    justifyContent: 'center',
+  },
+  dateText: {
+    color: '#333',
+    fontSize: 16,
+  },
+  calendarContainer: {
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 8,
+    padding: 10,
+    backgroundColor: '#ffffff',
+  },
+  hideCalendarButton: {
+    backgroundColor: '#6c757d',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  datePickerIcon: {
+    position: 'absolute',
+    right: 10,
+    color: '#007BFF',
+  },
 });
