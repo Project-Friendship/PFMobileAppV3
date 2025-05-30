@@ -41,11 +41,11 @@ export default function TabLayout() {
         }}
       />
        <Tabs.Screen
-        name="alert"
+        name="time_entry"
         options={{
           title: '',
           headerShown: false,
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons size={28} name="alert-outline" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="more-time" color={color} />,
         }}
       />
        <Tabs.Screen

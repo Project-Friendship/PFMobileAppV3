@@ -9,6 +9,9 @@ import {
   ThemeProvider
 } from '@aws-amplify/ui-react-native';
 
+
+
+
 import awsconfig from './aws-exports';
 import Home from './(tabs)/Home';
 import { Link } from 'expo-router';
@@ -84,32 +87,35 @@ function App() {
   } = theme;
 
   return (
-    <ThemeProvider theme={customTheme}>
-    <Authenticator.Provider>
-      <Authenticator
-        // custom background color
-        Container={(props) => (
-          <Authenticator.Container
-            {...props}
-            style={{ backgroundColor: 'cornsilk' }}
-          />
-        )}
-        // custom header
-        Header={MyAppHeader}
-        // custom form style
-        components={{
-          SignIn: (props) => (
-            <Authenticator.SignIn {...props} style={{ backgroundColor: 'orange', borderRadius: 10, padding: 10 }} /> // this style is not working
-          ),
-        }}
-      >
-        <View style={style.container}>
-          <SignOutButton />
-          <Home />
-        </View>
-      </Authenticator>
-    </Authenticator.Provider>
-    </ThemeProvider>
+
+      <ThemeProvider theme={customTheme}>
+      <Authenticator.Provider>
+        <Authenticator
+          // custom background color
+          Container={(props) => (
+            <Authenticator.Container
+              {...props}
+              style={{ backgroundColor: 'cornsilk' }}
+            />
+          )}
+          // custom header
+          Header={MyAppHeader}
+          // custom form style
+          components={{
+            SignIn: (props) => (
+              <Authenticator.SignIn {...props} style={{ backgroundColor: 'orange', borderRadius: 10, padding: 10 }} /> // this style is not working
+            ),
+          }}
+        >
+          <View style={style.container}>
+            <SignOutButton />
+            <Home />
+          </View>
+        </Authenticator>
+      </Authenticator.Provider>
+      </ThemeProvider>
+
+
   );
 }
 
