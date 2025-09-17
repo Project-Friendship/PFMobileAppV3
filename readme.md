@@ -6,7 +6,7 @@ Collaborators: Josh Meier, Noah Lee, ...
 2. Ask Noah or Josh for the aws-exports.js file - put it in \src
 3. npm install
 4. npx expo run:ios - to test application
-
+5. npm run web - Runs application on web browser
 
 ## Other info:
 - The amplify app is 'dev'
