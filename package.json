@@ -27,7 +27,8 @@
     "expo-router": "~4.0.17",
     "react-native-screens": "~4.4.0",
     "expo-linking": "~7.0.5",
-    "expo-constants": "~17.0.7"
+    "expo-constants": "~17.0.7",
+    "react-native-web": "~0.19.13"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.13.0",
