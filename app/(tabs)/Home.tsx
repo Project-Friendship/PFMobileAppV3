@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { 
-  View, 
-  Text, 
-  ActivityIndicator, 
-  TouchableOpacity, 
-  ScrollView, 
-  StyleSheet, 
-  Image 
+import {
+  View,
+  Text,
+  ActivityIndicator,
+  TouchableOpacity,
+  ScrollView,
+  StyleSheet,
+  Image
 } from 'react-native';
 import { getCurrentUser, signOut } from 'aws-amplify/auth';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import LoadingSpinner from '../../components/ui/LoadingSpinner';
+import Button from '../../components/ui/Button';
 
 const Home: React.FC = () => {
   const [user, setUser] = useState<{ username: string; attributes?: { email?: string } } | null>(
@@ -64,12 +66,8 @@ const Home: React.FC = () => {
   };
 
   if (loading) {
-    return (
-      <View style={styles.container}>
-        <ActivityIndicator size="large" color="#0000ff" />
-        <Text>Loading user data...</Text>
-      </View>
-    );
+    // Using LoadingSpinner component but preserving the same rendered structure for tests
+    return <LoadingSpinner />;
   }
 
   if (!user) {
@@ -91,9 +89,13 @@ const Home: React.FC = () => {
         </View>
       </View>
 
-      <TouchableOpacity style={styles.signOutButton} onPress={handleSignOut}>
-          <Text style={styles.signOutButtonText}>Sign Out</Text>
-      </TouchableOpacity>
+      <Button
+        text="Sign Out"
+        onPress={handleSignOut}
+        variant="danger"
+        style={styles.signOutButton}
+        textStyle={styles.signOutButtonText}
+      />
 
       <View style={styles.logoContainer}>
         <Image 
@@ -235,15 +237,12 @@ const styles = StyleSheet.create({
     color: '#7f8c8d',
   },
   signOutButton: {
-    backgroundColor: '#e74c3c',
     width: '30%',
     marginBottom: 6,
     paddingHorizontal: 12,
     paddingVertical: 8,
-    borderRadius: 5,
   },
   signOutButtonText: {
-    color: 'white',
     fontWeight: '600',
   },
   logoContainer: {

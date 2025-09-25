@@ -2,20 +2,23 @@
 // Things to do: adjust events page to include groups - send notification for which group? created for set of groups? join event as a group?
 
 import React, { useState, useEffect } from 'react';
-import { 
-  View, 
-  Text, 
-  StyleSheet, 
-  SafeAreaView, 
-  TouchableOpacity, 
-  FlatList, 
-  Modal, 
+import {
+  View,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  TouchableOpacity,
+  FlatList,
+  Modal,
   TextInput,
   ScrollView
 } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import colors from '../../assets/colors/colors';
+import EmptyState from '../../components/ui/EmptyState';
+import Button from '../../components/ui/Button';
+import SectionHeader from '../../components/ui/SectionHeader';
 
 // Define interfaces
 interface Group {
@@ -364,9 +367,16 @@ const Relationships: React.FC = () => {
       <ScrollView>
         {/* My Groups Section */}
         <View style={styles.section}>
-          <Text style={styles.sectionHeader}>My Groups</Text>
+          <SectionHeader
+            title="My Groups"
+            style={styles.sectionHeaderStyle}
+            textStyle={styles.sectionHeaderText}
+          />
           {myGroups.length === 0 ? (
-            <Text style={styles.emptyText}>You're not a member of any groups yet</Text>
+            <EmptyState
+              message="You're not a member of any groups yet"
+              icon="people-outline"
+            />
           ) : (
             myGroups.map(item => (
               <TouchableOpacity 
@@ -396,9 +406,16 @@ const Relationships: React.FC = () => {
 
         {/* Public Groups Section */}
         <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Public Groups</Text>
+          <SectionHeader
+            title="Public Groups"
+            style={styles.sectionHeaderStyle}
+            textStyle={styles.sectionHeaderText}
+          />
           {availablePublicGroups.length === 0 ? (
-            <Text style={styles.emptyText}>No additional public groups available</Text>
+            <EmptyState
+              message="No additional public groups available"
+              icon="search-outline"
+            />
           ) : (
             availablePublicGroups.map(item => (
               <TouchableOpacity 
@@ -420,20 +437,19 @@ const Relationships: React.FC = () => {
       </ScrollView>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity 
-          style={styles.button} 
+        <Button
+          text="Join a group"
           onPress={() => setJoinModalVisible(true)}
-        >
-          <Text style={styles.buttonText}>Join a group</Text> 
-          {/* Private groups */}
-        </TouchableOpacity>
+          variant="secondary"
+          style={styles.button}
+        />
 
-        <TouchableOpacity 
-          style={styles.button} 
+        <Button
+          text="Create"
           onPress={() => setCreateModalVisible(true)}
-        >
-          <Text style={styles.buttonText}>Create</Text>
-        </TouchableOpacity>
+          variant="secondary"
+          style={styles.button}
+        />
       </View>
 
       {/* Join Group Modal */}
@@ -832,11 +848,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   button: {
-    backgroundColor: '#e9e9e9',
-    padding: 12,
-    borderRadius: 24,
     width: '45%',
-    alignItems: 'center',
   },
   buttonText: {
     fontSize: 16,
@@ -844,12 +856,14 @@ const styles = StyleSheet.create({
   section: {
     marginBottom: 20,
   },
-  sectionHeader: {
-    fontSize: 18,
+  sectionHeaderStyle: {
     padding: 10,
     backgroundColor: '#e9e9e9',
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
+  },
+  sectionHeaderText: {
+    fontSize: 18,
   },
   groupItem: {
     flexDirection: 'row',

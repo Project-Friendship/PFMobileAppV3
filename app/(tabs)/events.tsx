@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { 
-  View, 
-  Text, 
-  FlatList, 
-  ActivityIndicator, 
-  StyleSheet, 
-  SafeAreaView, 
-  Modal, 
+import {
+  View,
+  Text,
+  FlatList,
+  ActivityIndicator,
+  StyleSheet,
+  SafeAreaView,
+  Modal,
   TouchableOpacity,
   TextInput,
   ScrollView,
@@ -14,6 +14,11 @@ import {
 } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { Calendar } from 'react-native-calendars';
+import EventCard from '../../components/events/EventCard';
+import EmptyState from '../../components/ui/EmptyState';
+import SectionHeader from '../../components/ui/SectionHeader';
+import Button from '../../components/ui/Button';
+import LoadingSpinner from '../../components/ui/LoadingSpinner';
 
 interface Event {
   id: string;
@@ -312,12 +317,7 @@ const Events: React.FC = () => {
   };
 
   if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="blue" />
-        <Text>Loading events...</Text>
-      </View>
-    );
+    return <LoadingSpinner text="Loading events..." color="blue" />;
   }
 
   return (
@@ -325,9 +325,9 @@ const Events: React.FC = () => {
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         {/* User Events Section */}
         <View style={styles.eventsSection}>
-          <Text style={styles.header}>My Events - {userId}</Text>
+          <SectionHeader title={`My Events - ${userId}`} />
           {events.length === 0 ? (
-            <Text style={styles.noEventsText}>No events available</Text>
+            <EmptyState message="No events available" icon="calendar-outline" />
           ) : (
             <View style={styles.listContainer}>
               <FlatList
@@ -336,11 +336,11 @@ const Events: React.FC = () => {
                 horizontal={false}
                 showsVerticalScrollIndicator={true}
                 renderItem={({ item }) => (
-                  <TouchableOpacity style={styles.eventCard} onPress={() => handleEventPress(item)}>
-                    <Text style={styles.eventTitle}>{item.title}</Text>
-                    <Text style={styles.eventDetails}>{item.date} • {item.location}</Text>
-                    <Text style={styles.eventCategory}>{item.category}</Text>
-                  </TouchableOpacity>
+                  <EventCard
+                    event={item}
+                    onPress={() => handleEventPress(item)}
+                    showCategory={true}
+                  />
                 )}
                 nestedScrollEnabled={true}
                 style={styles.flatListHeight}
@@ -367,9 +367,9 @@ const Events: React.FC = () => {
 
          {/* Recent Events Section (< 1 month ago) */}
          <View style={styles.eventsSection}>
-          <Text style={styles.header}>Recent Events</Text>
+          <SectionHeader title="Recent Events" />
           {recentEvents.length === 0 ? (
-            <Text style={styles.noEventsText}>No recent events available</Text>
+            <EmptyState message="No recent events available" icon="time-outline" />
           ) : (
             <View style={styles.listContainer}>
               <FlatList
@@ -378,14 +378,11 @@ const Events: React.FC = () => {
                 horizontal={false}
                 showsVerticalScrollIndicator={true}
                 renderItem={({ item }) => (
-                  <TouchableOpacity 
-                    style={styles.eventCard} 
+                  <EventCard
+                    event={item}
                     onPress={() => handleEventPress(item, true)}
-                  >
-                    <Text style={styles.eventTitle}>{item.title}</Text>
-                    <Text style={styles.eventDetails}>{item.date} • {item.location}</Text>
-                    <Text style={styles.eventCategory}>{item.category}</Text>
-                  </TouchableOpacity>
+                    showCategory={true}
+                  />
                 )}
                 nestedScrollEnabled={true}
                 style={styles.flatListHeight}
@@ -412,7 +409,7 @@ const Events: React.FC = () => {
 
         {/* Global Upcoming Events Section */}
         <View style={styles.eventsSection}>
-          <Text style={styles.header}>Upcoming Events</Text>
+          <SectionHeader title="Upcoming Events" />
           <View style={styles.listContainer}>
             <FlatList
               data={showAllUpcoming ? allEvents : allEvents.slice(0, 2)}
@@ -420,11 +417,11 @@ const Events: React.FC = () => {
               horizontal={false}
               showsVerticalScrollIndicator={true}
               renderItem={({ item }) => (
-                <TouchableOpacity style={styles.eventCard} onPress={() => handleEventPress(item, true)}>
-                  <Text style={styles.eventTitle}>{item.title}</Text>
-                  <Text style={styles.eventDetails}>{item.date} • {item.location}</Text>
-                  <Text style={styles.eventCategory}>{item.category}</Text>
-                </TouchableOpacity>
+                <EventCard
+                  event={item}
+                  onPress={() => handleEventPress(item, true)}
+                  showCategory={true}
+                />
               )}
               nestedScrollEnabled={true}
               style={styles.flatListHeight}
@@ -449,12 +446,13 @@ const Events: React.FC = () => {
         </View>
         
         {/* Create Event Button */}
-        <TouchableOpacity 
-          style={styles.createButton} 
+        <Button
+          text="Create New Event"
           onPress={() => setCreateModalVisible(true)}
-        >
-          <Text style={styles.buttonText}>Create New Event</Text>
-        </TouchableOpacity>
+          variant="success"
+          style={styles.createButton}
+          fullWidth={true}
+        />
       </ScrollView>
 
       {/* User Event Modal */}
@@ -893,13 +891,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   createButton: {
-    backgroundColor: '#28a745',
-    padding: 12,
     marginLeft: 5,
     marginRight: 5,
     marginBottom: 16,
-    borderRadius: 5,
-    alignItems: 'center',
   },
   input: {
     borderWidth: 1,
