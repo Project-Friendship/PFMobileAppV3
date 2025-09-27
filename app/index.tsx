@@ -9,8 +9,8 @@ import {
   ThemeProvider
 } from '@aws-amplify/ui-react-native';
 
-import awsconfig from './aws-exports';
-import Home from './(tabs)/Home';
+import awsconfig from '../src/aws-exports';
+import Home2 from './Home2';
 import { Link } from 'expo-router';
 // import Home from './src/(tabs)/Home';
 Amplify.configure(awsconfig);
@@ -64,7 +64,7 @@ const MyAppHeader = () => {
       {/* <Text style={{ fontSize: 30, padding: 16, color: 'black', fontFamily: 'Vision', textAlign: 'center' }}>
         Project Friendship
       </Text> */}
-      <Link href='/(tabs)/Home'>Skip to home</Link>
+      {/* <Link href='/(tabs)/Home'>Skip to home</Link> */}
     </View>
   );
 };
@@ -105,7 +105,7 @@ function App() {
       >
         <View style={style.container}>
           <SignOutButton />
-          <Home />
+          <Home2/> 
         </View>
       </Authenticator>
     </Authenticator.Provider>
