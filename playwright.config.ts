@@ -76,4 +76,9 @@ export default defineConfig({
   //   url: 'http://localhost:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+  webServer: {
+    command: 'npm run dev',
+    url: 'http://localhost:8081',
+    reuseExistingServer: !process.env.CI,
+  },
 });

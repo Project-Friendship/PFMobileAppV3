@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
+    "dev": "expo start",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
