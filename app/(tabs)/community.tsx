@@ -69,7 +69,7 @@ export default function Community() {
     }
   };
 
-  const renderPartner = ({ item }: { item: Partner }) => (
+  const renderPartner = ({ item, index }: { item: Partner; index: number }) => (
     <View style={styles.partnerRow}>
       <Image source={{ uri: item.logo }} style={styles.partnerLogoSquare} />
     
@@ -90,6 +90,7 @@ export default function Community() {
       <TouchableOpacity
         onPress={() => openMaps(item.googlemaps, item.applemaps)}
         style={styles.navIconContainer}
+        testID={`nav-icon-container-${index}`}
       >
         <Entypo name="location" size={24} color="black" />
       </TouchableOpacity>
