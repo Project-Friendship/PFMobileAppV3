@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, waitFor, fireEvent } from '@testing-library/react-native';
-import Community from './Community';
+import Community from './community';
 import { Alert, Linking } from 'react-native';
 
 // Mock the JSON import
