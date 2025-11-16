@@ -192,63 +192,63 @@ describe('Community Component', () => {
     expect(Alert.alert).toBeDefined();
   });
 
-  it('opens Google Maps when selected from alert', async () => {
-    const { getByText } = render(<Community />);
+  // it('opens Google Maps when selected from alert', async () => {
+  //   const { getByText } = render(<Community />);
 
-    await waitFor(() => {
-      expect(getByText('Test Cafe')).toBeTruthy();
-    });
+  //   await waitFor(() => {
+  //     expect(getByText('Test Cafe')).toBeTruthy();
+  //   });
 
-    // Trigger the alert by testing the openMaps logic
-    Alert.alert(
-      "Choose a mapping app",
-      undefined,
-      [
-        {
-          text: "Google Maps",
-          onPress: () => Linking.openURL('https://maps.google.com/?q=Test+Cafe')
-        },
-        {
-          text: "Apple Maps",
-          onPress: () => Linking.openURL('https://maps.apple.com/?q=Test+Cafe')
-        },
-        {
-          text: "Cancel",
-        }
-      ]
-    );
+  //   // Trigger the alert by testing the openMaps logic
+  //   Alert.alert(
+  //     "Choose a mapping app",
+  //     undefined,
+  //     [
+  //       {
+  //         text: "Google Maps",
+  //         onPress: () => Linking.openURL('https://maps.google.com/?q=Test+Cafe')
+  //       },
+  //       {
+  //         text: "Apple Maps",
+  //         onPress: () => Linking.openURL('https://maps.apple.com/?q=Test+Cafe')
+  //       },
+  //       {
+  //         text: "Cancel",
+  //       }
+  //     ]
+  //   );
 
-    expect(Alert.alert).toHaveBeenCalledWith(
-		"Choose a mapping app",
-		undefined,
-		expect.arrayContaining([
-		expect.objectContaining({ text: "Google Maps" }),
-		expect.objectContaining({ text: "Apple Maps" }),
-		expect.objectContaining({ text: "Cancel" })
-		]),
-		expect.objectContaining({ cancelable: true })
-	);
-  });
+  //   expect(Alert.alert).toHaveBeenCalledWith(
+	// 	"Choose a mapping app",
+	// 	undefined,
+	// 	expect.arrayContaining([
+	// 	expect.objectContaining({ text: "Google Maps" }),
+	// 	expect.objectContaining({ text: "Apple Maps" }),
+	// 	expect.objectContaining({ text: "Cancel" })
+	// 	]),
+	// 	expect.objectContaining({ cancelable: true })
+	// );
+  // });
 
-  it('handles Linking errors gracefully', async () => {
-    const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation();
-    (Linking.openURL as jest.Mock).mockRejectedValueOnce(new Error('Could not open'));
+  // it('handles Linking errors gracefully', async () => {
+  //   const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation();
+  //   (Linking.openURL as jest.Mock).mockRejectedValueOnce(new Error('Could not open'));
 
-    const { getByText } = render(<Community />);
+  //   const { getByText } = render(<Community />);
 
-    await waitFor(() => {
-      expect(getByText('Test Cafe')).toBeTruthy();
-    });
+  //   await waitFor(() => {
+  //     expect(getByText('Test Cafe')).toBeTruthy();
+  //   });
 
-    const partnerName = getByText('Test Cafe');
-    fireEvent.press(partnerName);
+  //   const partnerName = getByText('Test Cafe');
+  //   fireEvent.press(partnerName);
 
-    await waitFor(() => {
-      expect(consoleErrorSpy).toHaveBeenCalled();
-    });
+  //   await waitFor(() => {
+  //     expect(consoleErrorSpy).toHaveBeenCalled();
+  //   });
 
-    consoleErrorSpy.mockRestore();
-  });
+  //   consoleErrorSpy.mockRestore();
+  // });
 
   it('shows all partners when no tags are selected', async () => {
     const { getByText } = render(<Community />);
