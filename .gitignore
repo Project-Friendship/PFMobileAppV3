@@ -60,6 +60,7 @@ amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
 **.sample
+package-lock.json
 #amplify-do-not-edit-end
 
 # Playwright

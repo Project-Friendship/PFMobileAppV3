@@ -1,5 +1,5 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Tabs } from 'expo-router';
+import { Tabs, useLocalSearchParams } from 'expo-router';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -10,6 +10,7 @@ import colors from '../../assets/colors/colors'
 
 
 export default function TabLayout() {
+  const { userId } = useLocalSearchParams<{ userId: string }>();
   return (
     <Tabs 
       screenOptions={{ 
@@ -23,6 +24,7 @@ export default function TabLayout() {
           headerShown: false,
           tabBarIcon: ({ color }) => <MaterialCommunityIcons size={28} name="calendar" color={color} />,
         }}
+        initialParams={{userId}}
       />
       <Tabs.Screen
         name="community"
@@ -31,6 +33,7 @@ export default function TabLayout() {
           headerShown: false,
           tabBarIcon: ({ color }) => <Ionicons size={28} name="location-outline" color={color} />,
         }}
+        initialParams={{userId}}
       />
        <Tabs.Screen
         name="Home"
@@ -39,6 +42,7 @@ export default function TabLayout() {
           headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
         }}
+        initialParams={{userId}}
       />
        <Tabs.Screen
         name="alert"
@@ -47,6 +51,7 @@ export default function TabLayout() {
           headerShown: false,
           tabBarIcon: ({ color }) => <MaterialCommunityIcons size={28} name="alert-outline" color={color} />,
         }}
+        initialParams={{userId}}
       />
        <Tabs.Screen
         name="relationships"
@@ -55,6 +60,7 @@ export default function TabLayout() {
           headerShown: false,
           tabBarIcon: ({ color }) => <MaterialIcons size={28} name="people" color={color} />,
         }}
+        initialParams={{userId}}
       />
     </Tabs>
   );

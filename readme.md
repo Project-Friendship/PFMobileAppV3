@@ -7,6 +7,10 @@ Collaborators: Josh Meier, Noah Lee, ...
 3. npm install
 4. npx expo run:ios - to test application
 
+## Testing
+- To run test: `npm test`
+- Make unit test: `{filename}.test.tsx`
+
 ## Other info:
 - The amplify app is 'dev'
 - The cognito userpool is the one that begins with 'dev...'
