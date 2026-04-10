@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, FlatList, Text, View, Image, StyleSheet, Alert, Linking, Platform, TouchableOpacity, ScrollView } from 'react-native';
+import { SafeAreaView, FlatList, Text, View, Image, StyleSheet, Alert, Linking, Platform, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { getCurrentUser, fetchAuthSession } from 'aws-amplify/auth';
 
 import communityPartnersJson from '../../assets/communitypartners.json';
-import colors from '../../assets/colors/colors'
+import colors from '../../assets/colors/colors';
 
 interface Partner {
   title: string;
@@ -16,16 +18,94 @@ interface Partner {
   applemaps: string;
 }
 
+interface PartnerWithCheckIn extends Partner {
+  hasCheckedIn?: boolean;
+  isCheckingIn?: boolean;
+}
+
 const allDescriptiveTags = ['Entertainment', 'Games', 'Crafts', 'Snack/Drink', 'Sports', 'Winter Sports',];
 const allLocationalTags = ['Carleton', 'St. Olaf', 'In Town'];
 const communityPartners: Partner[] = communityPartnersJson;
 
-export default function Community() {
-  const [partners, setPartners] = useState<Partner[]>([]);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+// API Gateway Stage URL from backend documentation.
+const API_BASE_URL =
+  process.env.EXPO_PUBLIC_API_BASE_URL ||
+  'https://iotqv7u2t0.execute-api.us-east-2.amazonaws.com/Stage-1';
 
+// Get bearer token from AWS Cognito session
+const getBearerToken = async (): Promise<string> => {
+  const session = await fetchAuthSession();
+
+  // Backend docs specify using Cognito IdToken as bearer token.
+  if (session.tokens?.idToken) {
+    return session.tokens.idToken.toString();
+  }
+
+  if (session.tokens?.accessToken) {
+    return session.tokens.accessToken.toString();
+  }
+
+  throw new Error('No authentication token available. Please sign in.');
+};
+
+// Check in at a community partner location
+const checkInAtPartner = async (
+  userId: string,
+  partnerId: string
+): Promise<{ success: boolean; message?: string; data?: any }> => {
+  try {
+    const token = await getBearerToken();
+
+    const response = await fetch(`${API_BASE_URL}/community`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userId,
+        partnerId,
+        timestamp: new Date().toISOString(),
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.message || `Failed to check in: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return { success: true, data };
+  } catch (error) {
+    console.error('Error checking in:', error);
+    return {
+      success: false,
+      message: error instanceof Error ? error.message : 'Failed to check in',
+    };
+  }
+};
+
+export default function Community() {
+  const [partners, setPartners] = useState<PartnerWithCheckIn[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [userId, setUserId] = useState<string | null>(null);
+
+  // Get current user ID
   useEffect(() => {
-    setPartners(communityPartners);
+    const fetchUserId = async () => {
+      try {
+        const { userId: currentUserId } = await getCurrentUser();
+        setUserId(currentUserId);
+      } catch (error) {
+        console.error('Error fetching user ID:', error);
+      }
+    };
+    fetchUserId();
+  }, []);
+
+  // Load partners once (keep screen behavior simple and predictable)
+  useEffect(() => {
+    setPartners(communityPartners.map(p => ({ ...p, hasCheckedIn: false, isCheckingIn: false })));
   }, []);
 
   const openMaps = (googlemapsLink: string, applemapsLink: string) => {
@@ -69,7 +149,79 @@ export default function Community() {
     }
   };
 
-  const renderPartner = ({ item, index }: { item: Partner; index: number }) => (
+  const handleCheckIn = async (partner: PartnerWithCheckIn) => {
+    if (!userId) {
+      Alert.alert('Error', 'User not authenticated. Please log in to check in.');
+      return;
+    }
+
+    if (partner.isCheckingIn) {
+      return; // Prevent multiple simultaneous check-ins
+    }
+
+    // Update UI to show loading state
+    setPartners(prevPartners => {
+      return prevPartners.map(p => 
+        p.title === partner.title 
+          ? { ...p, isCheckingIn: true }
+          : p
+      );
+    });
+
+    try {
+      const result = await checkInAtPartner(userId, partner.title);
+      
+      if (result.success) {
+        // Update the partner's check-in status
+        setPartners(prevPartners => {
+          return prevPartners.map(p => 
+            p.title === partner.title 
+              ? { ...p, hasCheckedIn: true, isCheckingIn: false }
+              : p
+          );
+        });
+        
+        Alert.alert(
+          'Checked In!',
+          `You've successfully checked in at ${partner.title}!`,
+          [{ text: 'OK' }]
+        );
+      } else {
+        Alert.alert(
+          'Check-In Failed',
+          result.message || 'Unable to check in. Please try again later.',
+          [{ text: 'OK' }]
+        );
+        
+        // Reset loading state
+        setPartners(prevPartners => {
+          return prevPartners.map(p => 
+            p.title === partner.title 
+              ? { ...p, isCheckingIn: false }
+              : p
+          );
+        });
+      }
+    } catch (error) {
+      console.error('Error during check-in:', error);
+      Alert.alert(
+        'Error',
+        'An unexpected error occurred. Please try again.',
+        [{ text: 'OK' }]
+      );
+      
+      // Reset loading state
+      setPartners(prevPartners => {
+        return prevPartners.map(p => 
+          p.title === partner.title 
+            ? { ...p, isCheckingIn: false }
+            : p
+        );
+      });
+    }
+  };
+
+  const renderPartner = ({ item, index }: { item: PartnerWithCheckIn; index: number }) => (
     <View style={styles.partnerRow}>
       <Image source={{ uri: item.logo }} style={styles.partnerLogoSquare} />
     
@@ -87,13 +239,34 @@ export default function Community() {
         <Text style={styles.partnerDescription}>{item.description}</Text>
       </View>
     
-      <TouchableOpacity
-        onPress={() => openMaps(item.googlemaps, item.applemaps)}
-        style={styles.navIconContainer}
-        testID={`nav-icon-container-${index}`}
-      >
-        <Entypo name="location" size={24} color="black" />
-      </TouchableOpacity>
+      <View style={styles.iconContainer}>
+        <TouchableOpacity
+          onPress={() => openMaps(item.googlemaps, item.applemaps)}
+          style={styles.navIconContainer}
+          testID={`nav-icon-container-${index}`}
+        >
+          <Entypo name="location" size={24} color="black" />
+        </TouchableOpacity>
+        
+        <TouchableOpacity
+          onPress={() => handleCheckIn(item)}
+          style={[
+            styles.checkInButton,
+            item.hasCheckedIn && styles.checkInButtonChecked,
+            item.isCheckingIn && styles.checkInButtonLoading
+          ]}
+          disabled={item.isCheckingIn || item.hasCheckedIn}
+          testID={`check-in-button-${index}`}
+        >
+          {item.isCheckingIn ? (
+            <ActivityIndicator size="small" color="#fff" />
+          ) : item.hasCheckedIn ? (
+            <Ionicons name="checkmark-circle" size={24} color="#4CAF50" />
+          ) : (
+            <Ionicons name="checkmark-circle-outline" size={24} color="#0066cc" />
+          )}
+        </TouchableOpacity>
+      </View>
     </View>
   );
 
@@ -277,12 +450,28 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#555',
   },
+  iconContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
   navIconContainer: {
     padding: 8,
   },
   navIcon: {
     fontSize: 24,
     color: '#333',
+  },
+  checkInButton: {
+    padding: 8,
+    borderRadius: 20,
+    backgroundColor: 'transparent',
+  },
+  checkInButtonChecked: {
+    opacity: 0.7,
+  },
+  checkInButtonLoading: {
+    opacity: 0.5,
   },
   tagDivider: {
   width: 1,
