@@ -9,7 +9,7 @@ import {
   ThemeProvider
 } from '@aws-amplify/ui-react-native';
 
-import awsconfig from '../src/aws-exports';
+import awsconfig from '../aws-exports';
 import Home2 from './Home2';
 import { Link } from 'expo-router';
 // import Home from './src/(tabs)/Home';
