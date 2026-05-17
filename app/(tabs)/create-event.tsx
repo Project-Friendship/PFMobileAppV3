@@ -7,18 +7,17 @@ import {
   StyleSheet,
   View,
   Alert,
-  Image,
 } from "react-native";
 
-export default function MentorMeeting() {
+export default function Events() {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleCreateMentorMeeting = () => {
+  const handleCreateEvent = () => {
     Alert.alert(
-      "Mentor Meeting Created",
+      "Event Created",
       `Title: ${title}\nDescription: ${description}`,
     );
 
@@ -29,19 +28,13 @@ export default function MentorMeeting() {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <Image
-        source={require("../../assets/banner-2.png")}
-        style={styles.logo}
-        resizeMode="contain"
-      />
-      <Text style={styles.header}>Time Entry:</Text>
-      <Text style={styles.label}>Activity:</Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.label}>Event Title:</Text>
       <TextInput
         style={styles.input}
         placeholder="e.g. Birthday Party"
         value={title}
-        onChangeText={(text) => setTitle(text)} // Updates the 'title' variable as you type
+        onChangeText={(text) => setTitle(text)}
       />
 
       <Text style={styles.label}>Date:</Text>
@@ -66,47 +59,20 @@ export default function MentorMeeting() {
         onChangeText={(text) => setDescription(text)}
         multiline={true}
       />
-      <Button title="Save Mentor Meeting" onPress={handleCreateMentorMeeting} />
+      <Button title="Save Event" onPress={handleCreateEvent} />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: "#F8F9FA",
-  },
-  container: {
-    padding: 20,
-  },
-
-  label: {
-    fontSize: 16,
-    fontWeight: "600",
-    marginBottom: 5,
-    marginLeft: 20,
-    marginTop: 20,
-  },
-  header: {
-    fontSize: 22,
-    fontWeight: "bold",
-
-    marginLeft: 20,
-    marginTop: 20,
-    color: "#1A1A1A",
-  },
+  container: { padding: 20, marginTop: 50 },
+  label: { fontSize: 16, fontWeight: "600", marginBottom: 5 },
   input: {
     borderWidth: 1,
     borderColor: "#ccc",
     padding: 10,
     borderRadius: 5,
-    marginBottom: 5,
+    marginBottom: 20,
     fontSize: 16,
-    marginRight: 20,
-    marginLeft: 20,
-  },
-  logo: {
-    width: 500,
-    height: 80,
   },
 });
