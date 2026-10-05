@@ -8,15 +8,16 @@ import { StyleSheet } from 'react-native'
 import React from 'react';
 import colors from '../../assets/colors/colors'
 
-
 export default function TabLayout() {
   const { userId } = useLocalSearchParams<{ userId: string }>();
   return (
-    <Tabs 
-      screenOptions={{ 
-        tabBarActiveTintColor: 'white' ,
-        tabBarInactiveTintColor: 'black' ,
-        tabBarStyle: styles.tabBar }}>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: 'white',
+        tabBarInactiveTintColor: 'black',
+        tabBarStyle: styles.tabBar,
+      }}
+    >
       <Tabs.Screen
         name="events"
         options={{
@@ -35,7 +36,13 @@ export default function TabLayout() {
         }}
         initialParams={{userId}}
       />
-       <Tabs.Screen
+      <Tabs.Screen
+        name="create-event"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
         name="Home"
         options={{
           title: '',
@@ -44,7 +51,7 @@ export default function TabLayout() {
         }}
         initialParams={{userId}}
       />
-       <Tabs.Screen
+      <Tabs.Screen
         name="alert"
         options={{
           title: '',
@@ -53,7 +60,16 @@ export default function TabLayout() {
         }}
         initialParams={{userId}}
       />
-       <Tabs.Screen
+      <Tabs.Screen
+        name="time_entry"
+        options={{
+          title: '',
+          headerShown: false,
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="more-time" color={color} />,
+        }}
+        initialParams={{userId}}
+      />
+      <Tabs.Screen
         name="relationships"
         options={{
           title: '',
@@ -68,7 +84,7 @@ export default function TabLayout() {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: colors.light_blue, 
-    height: '10%'
-  }
+    backgroundColor: colors.light_blue,
+    height: '10%',
+  },
 });
