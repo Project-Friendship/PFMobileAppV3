@@ -1,31 +1,42 @@
-// tests/app.spec.ts
 import { test, expect } from '@playwright/test';
 
-const pages = [
-  { url: 'http://localhost:8081/', name: 'Home' },
-  { url: 'http://localhost:8081/home', name: 'Home Page' },
-  { url: 'http://localhost:8081/events', name: 'Events' },
-  { url: 'http://localhost:8081/community', name: 'Community' },
-  { url: 'http://localhost:8081/alert', name: 'Alert' },
-  { url: 'http://localhost:8081/relationships', name: 'Relationships' },
-];
+test('sign-in renders the real PF login screen', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('/');
+  await expect(page.getByRole('button', { name: /^sign in$/i })).toBeVisible();
+  await expect(page.getByRole('img', { name: 'Project Friendship' })).toBeVisible();
+  await expect(page.getByText('Skip to home')).toHaveCount(0);
+  expect(errors).toEqual([]);
+});
 
-test.describe('Page Load Tests', () => {
-  for (const pageInfo of pages) {
-    test(`Should load ${pageInfo.name} page`, async ({ page }) => {
-      await page.goto(pageInfo.url, { waitUntil: 'networkidle' });
-      await expect(page).toHaveTitle("my_amplify_app");
-      // Wait for page to be fully loaded
-      await page.waitForLoadState('networkidle');
-      // Verify the page loaded with content
-      const body = page.locator('body');
-      await expect(body).toBeVisible();
-      // Check if h1 exists, verify it's visible
-      const h1 = page.locator('h1');
-      const hasH1 = await h1.count() > 0;
-      if (hasH1) {
-        await expect(h1.first()).toBeVisible();
-      }
-    });
-  }
-}); 
+test('sign-up and password reset can be opened and return to sign-in', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Create Account', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Create Account', exact: true })).toBeVisible();
+  await expect(page.getByRole('img', { name: 'Project Friendship' })).toBeVisible();
+  await page.getByRole('button', { name: /sign in/i }).click();
+  await page.getByRole('button', { name: /forgot.*password/i }).click();
+  await expect(page.getByRole('button', { name: /send code|reset password/i })).toBeVisible();
+  await page.getByRole('button', { name: /back to sign in/i }).click();
+  await expect(page.getByRole('button', { name: /^sign in$/i })).toBeVisible();
+});
+
+for (const route of ['/create-event', '/time_entry']) {
+  test(`${route} keeps typed date and location values`, async ({ page }) => {
+    await page.goto(route);
+    await page.getByPlaceholder('e.g. Today').fill('2026-10-13');
+    await page.getByPlaceholder('e.g. Weitz Center room 225').fill('Community Center');
+    await expect(page.getByPlaceholder('e.g. Today')).toHaveValue('2026-10-13');
+    await expect(page.getByPlaceholder('e.g. Weitz Center room 225')).toHaveValue('Community Center');
+  });
+}
+
+test('community filters actual partner content', async ({ page }) => {
+  await page.goto('/community');
+  await expect(page.getByText('Activities and Community Partners', { exact: true })).toBeVisible();
+  await expect(page.getByText('Tin Tea', { exact: true })).toBeVisible();
+  await page.getByText('Sports', { exact: true }).click();
+  await expect(page.getByText('Fairfield Inn and Suites', { exact: true })).toBeVisible();
+  await expect(page.getByText('Tin Tea', { exact: true })).toHaveCount(0);
+});

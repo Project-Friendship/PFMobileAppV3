@@ -2,6 +2,7 @@ import React from 'react';
 import { render, waitFor, fireEvent } from '@testing-library/react-native';
 import Community from './community';
 import { Alert, Linking } from 'react-native';
+import { getCurrentUser, fetchAuthSession } from 'aws-amplify/auth';
 
 // Mock the JSON import
 jest.mock('../../assets/communitypartners.json', () => [
@@ -45,6 +46,7 @@ jest.spyOn(Alert, 'alert');
 describe('Community Component', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    (getCurrentUser as jest.Mock).mockRejectedValue(new Error('Signed out'));
   });
 
   it('renders title and subtitle correctly', () => {
@@ -184,12 +186,13 @@ describe('Community Component', () => {
       expect(getByText('Test Cafe')).toBeTruthy();
     });
 
-    // Find all location icons and press the first one
-    const locationIcons = getAllByTestId('nav-icon-container-0') || [];
-
-    // For now, we can test that Alert.alert would be called
-    // by directly calling the openMaps function logic
-    expect(Alert.alert).toBeDefined();
+    fireEvent.press(getAllByTestId('nav-icon-container-0')[0]);
+    expect(Alert.alert).toHaveBeenCalledWith(
+      'Choose a mapping app',
+      undefined,
+      expect.arrayContaining([expect.objectContaining({ text: 'Google Maps' })]),
+      { cancelable: true },
+    );
   });
 
   // it('opens Google Maps when selected from alert', async () => {
@@ -278,5 +281,64 @@ describe('Community Component', () => {
       // Should still show Test Cafe as it matches both
       expect(getByText('Test Cafe')).toBeTruthy();
     });
+  });
+});
+
+// Check the app's own API behavior with deterministic responses, not a demo service.
+describe('Community check-in', () => {
+  const originalFetch = global.fetch;
+  const fetchMock = jest.fn();
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    global.fetch = fetchMock;
+    (getCurrentUser as jest.Mock).mockResolvedValue({ username: 'test-user', userId: 'user-123' });
+    (fetchAuthSession as jest.Mock).mockResolvedValue({
+      tokens: { idToken: { toString: () => 'test-id-token' } },
+    });
+  });
+
+  afterEach(() => { global.fetch = originalFetch; });
+
+  it('sends the authenticated check-in and confirms success', async () => {
+    fetchMock.mockResolvedValue({ ok: true, json: async () => ({ saved: true }) });
+    const { getByTestId } = render(<Community />);
+    await waitFor(() => expect(getCurrentUser).toHaveBeenCalled());
+    fireEvent.press(getByTestId('check-in-button-0'));
+    await waitFor(() => expect(Alert.alert).toHaveBeenCalledWith(
+      'Checked In!', expect.stringContaining('Test Cafe'), [{ text: 'OK' }],
+    ));
+    expect(fetchMock).toHaveBeenCalledWith(expect.stringMatching(/\/community$/), {
+      method: 'POST',
+      headers: { Authorization: 'Bearer test-id-token', 'Content-Type': 'application/json' },
+      body: expect.any(String),
+    });
+    expect(JSON.parse(fetchMock.mock.calls[0][1].body)).toEqual({
+      userId: 'user-123', partnerId: 'Test Cafe', timestamp: expect.any(String),
+    });
+  });
+
+  it('reports backend failure and permits retry', async () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation();
+    fetchMock.mockResolvedValueOnce({ ok: false, statusText: 'Bad Request', json: async () => ({ message: 'Try again' }) });
+    fetchMock.mockResolvedValueOnce({ ok: true, json: async () => ({ saved: true }) });
+    try {
+      const { getByTestId } = render(<Community />);
+      await waitFor(() => expect(getCurrentUser).toHaveBeenCalled());
+      fireEvent.press(getByTestId('check-in-button-0'));
+      await waitFor(() => expect(Alert.alert).toHaveBeenCalledWith('Check-In Failed', 'Try again', [{ text: 'OK' }]));
+      fireEvent.press(getByTestId('check-in-button-0'));
+      await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(2));
+      await waitFor(() => expect(Alert.alert).toHaveBeenCalledWith('Checked In!', expect.any(String), [{ text: 'OK' }]));
+    } finally { errorSpy.mockRestore(); }
+  });
+
+  it('does not submit check-ins while signed out', async () => {
+    (getCurrentUser as jest.Mock).mockRejectedValue(new Error('Signed out'));
+    const { getByTestId } = render(<Community />);
+    await waitFor(() => expect(getCurrentUser).toHaveBeenCalled());
+    fireEvent.press(getByTestId('check-in-button-0'));
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(Alert.alert).toHaveBeenCalledWith('Error', 'User not authenticated. Please log in to check in.');
   });
 });

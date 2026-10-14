@@ -42,14 +42,14 @@ export default function Events() {
         style={styles.input}
         placeholder="e.g. Today"
         value={date}
-        onChangeText={(text) => setDate(date)}
+        onChangeText={setDate}
       />
       <Text style={styles.label}>location:</Text>
       <TextInput
         style={styles.input}
         placeholder="e.g. Weitz Center room 225"
         value={location}
-        onChangeText={(text) => setLocation(location)}
+        onChangeText={setLocation}
       />
       <Text style={styles.label}>Description:</Text>
       <TextInput

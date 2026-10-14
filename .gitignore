@@ -60,7 +60,6 @@ amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
 **.sample
-package-lock.json
 #amplify-do-not-edit-end
 
 # Playwright
@@ -69,3 +68,6 @@ package-lock.json
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Generated test coverage
+/coverage/

@@ -2,6 +2,7 @@
 jest.mock('aws-amplify/auth', () => ({
   getCurrentUser: jest.fn(),
   signOut: jest.fn(),
+  fetchAuthSession: jest.fn(),
 }));
 
 // Mock expo-router
