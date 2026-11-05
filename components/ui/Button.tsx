@@ -1,5 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, ViewStyle, TextStyle, StyleProp } from 'react-native';
+import { brand, radius, spacing, status, surface, text as textColors, touchTarget } from '../../constants/theme';
 
 type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'success' | 'ghost';
 
@@ -61,8 +62,22 @@ const Button: React.FC<ButtonProps> = ({
   const getTextStyle = (): StyleProp<TextStyle> => {
     const baseStyles: StyleProp<TextStyle> = [styles.buttonText];
 
-    if (variant === 'ghost') {
-      baseStyles.push(styles.ghostText);
+    switch (variant) {
+      case 'primary':
+        baseStyles.push(styles.primaryText);
+        break;
+      case 'secondary':
+        baseStyles.push(styles.secondaryText);
+        break;
+      case 'danger':
+        baseStyles.push(styles.dangerText);
+        break;
+      case 'success':
+        baseStyles.push(styles.successText);
+        break;
+      case 'ghost':
+        baseStyles.push(styles.ghostText);
+        break;
     }
 
     if (textStyle) {
@@ -77,6 +92,8 @@ const Button: React.FC<ButtonProps> = ({
       style={getButtonStyle()}
       onPress={onPress}
       disabled={disabled}
+      accessibilityRole="button"
+      accessibilityState={{ disabled }}
     >
       <Text style={getTextStyle()}>{text}</Text>
     </TouchableOpacity>
@@ -85,27 +102,29 @@ const Button: React.FC<ButtonProps> = ({
 
 const styles = StyleSheet.create({
   button: {
-    padding: 12,
-    borderRadius: 5,
+    minHeight: touchTarget.min,
+    minWidth: touchTarget.min,
+    padding: spacing.md,
+    borderRadius: radius.md,
     alignItems: 'center',
     justifyContent: 'center',
   },
   primaryButton: {
-    backgroundColor: '#007BFF',
+    backgroundColor: brand.blue,
   },
   secondaryButton: {
-    backgroundColor: '#6c757d',
+    backgroundColor: brand.orange,
   },
   dangerButton: {
-    backgroundColor: '#dc3545',
+    backgroundColor: status.danger,
   },
   successButton: {
-    backgroundColor: '#28a745',
+    backgroundColor: status.success,
   },
   ghostButton: {
-    backgroundColor: 'transparent',
+    backgroundColor: surface.transparent,
     borderWidth: 1,
-    borderColor: '#007BFF',
+    borderColor: brand.purple,
   },
   disabledButton: {
     opacity: 0.5,
@@ -114,12 +133,24 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   buttonText: {
-    color: 'white',
     fontSize: 16,
     fontWeight: '500',
+    textAlign: 'center',
+  },
+  primaryText: {
+    color: textColors.onBlue,
+  },
+  secondaryText: {
+    color: textColors.onOrange,
+  },
+  dangerText: {
+    color: textColors.onRed,
+  },
+  successText: {
+    color: textColors.onSuccess,
   },
   ghostText: {
-    color: '#007BFF',
+    color: textColors.link,
   },
 });
 

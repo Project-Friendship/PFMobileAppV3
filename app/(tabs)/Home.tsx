@@ -81,7 +81,7 @@ const Home: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <View>
+        <View style={styles.headerText}>
           <Text style={styles.welcomeText}>Welcome, {user.username}!</Text>
           <Text style={styles.emailText}>
             {user.attributes?.email ? `${user.attributes.email}` : ''}
@@ -227,17 +227,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
+  // Lets the long welcome line and email shrink and wrap within the row on narrow screens.
+  headerText: {
+    flex: 1,
+    minWidth: 0,
+  },
   welcomeText: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#2c3e50',
+    flexShrink: 1,
   },
   emailText: {
     fontSize: 14,
     color: '#7f8c8d',
+    flexShrink: 1,
   },
   signOutButton: {
     width: '30%',
+    // Keeps "Sign Out" on one line when 30% of a narrow screen is too small.
+    minWidth: 120,
     marginBottom: 6,
     paddingHorizontal: 12,
     paddingVertical: 8,

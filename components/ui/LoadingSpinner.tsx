@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, ActivityIndicator, Text, StyleSheet } from 'react-native';
+import { brand, surface } from '../../constants/theme';
 
 interface LoadingSpinnerProps {
   size?: 'small' | 'large';
@@ -9,7 +10,8 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'large',
-  color = '#0000ff',
+  // Brand blue and orange fall below 3:1 on the background; purple is 7.4:1.
+  color = brand.purple,
   text = 'Loading user data...'
 }) => {
   return (
@@ -23,8 +25,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // 20 sits between spacing.lg and spacing.xl; kept as-is to preserve the existing layout.
     padding: 20,
-    backgroundColor: '#f5f5f9',
+    backgroundColor: surface.background,
     justifyContent: 'center',
     alignItems: 'center',
   },
